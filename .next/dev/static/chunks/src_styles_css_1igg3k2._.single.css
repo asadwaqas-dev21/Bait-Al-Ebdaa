@@ -113,28 +113,11 @@ h2 em {
   width: 250px;
   max-width: 100%;
   display: inline-flex;
-  position: relative;
 }
 
 .brand__logo {
   width: 100%;
   height: auto;
-}
-
-.brand__logo--accent {
-  clip-path: inset(0 0 0 92%);
-  display: none;
-  position: absolute;
-  inset: 0;
-}
-
-.brand--light .brand__logo, .site-header .brand__logo {
-  filter: brightness(0) invert();
-}
-
-.brand--light .brand__logo--accent, .site-header .brand__logo--accent {
-  filter: none;
-  display: block;
 }
 
 .site-header {

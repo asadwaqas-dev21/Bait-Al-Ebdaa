@@ -109,33 +109,19 @@ function Brand({ light = false, priority = false }) {
         className: `brand ${light ? "brand--light" : ""}`,
         href: "#top",
         "aria-label": "Arc and Grain home",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                className: "brand__logo",
-                src: "/assets/logo.png",
-                alt: "",
-                width: 250,
-                height: 64,
-                priority: priority
-            }, void 0, false, {
-                fileName: "[project]/src/App.jsx",
-                lineNumber: 33,
-                columnNumber: 108
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                className: "brand__logo brand__logo--accent",
-                src: "/assets/logo.png",
-                alt: "",
-                width: 250,
-                height: 64,
-                priority: priority
-            }, void 0, false, {
-                fileName: "[project]/src/App.jsx",
-                lineNumber: 33,
-                columnNumber: 215
-            }, this)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+            className: "brand__logo",
+            src: "/assets/logo.png",
+            alt: "",
+            width: 2170,
+            height: 725,
+            priority: priority
+        }, void 0, false, {
+            fileName: "[project]/src/App.jsx",
+            lineNumber: 33,
+            columnNumber: 108
+        }, this)
+    }, void 0, false, {
         fileName: "[project]/src/App.jsx",
         lineNumber: 33,
         columnNumber: 10

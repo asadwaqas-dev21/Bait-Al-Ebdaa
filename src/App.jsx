@@ -30,7 +30,7 @@ const projects = [
 ];
 
 function Brand({ light = false, priority = false }) {
-  return <a className={`brand ${light ? "brand--light" : ""}`} href="#top" aria-label="Arc and Grain home"><Image className="brand__logo" src="/assets/logo.png" alt="" width={250} height={64} priority={priority} /><Image className="brand__logo brand__logo--accent" src="/assets/logo.png" alt="" width={250} height={64} priority={priority} /></a>;
+  return <a className={`brand ${light ? "brand--light" : ""}`} href="#top" aria-label="Arc and Grain home"><Image className="brand__logo" src="/assets/logo.png" alt="" width={2170} height={725} priority={priority} /></a>;
 }
 
 function Reveal({ as: Tag = "div", className = "", children, delay = 0, ...props }) {
