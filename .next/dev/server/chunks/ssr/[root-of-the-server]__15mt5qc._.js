@@ -79,10 +79,10 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$m
 ;
 ;
 const metadata = {
-    title: "Arc & Grain Interiors — Dubai",
-    description: "Arc & Grain creates refined villa and office interiors across Dubai and Abu Dhabi, with in-house joinery, photorealistic 3D visualization, approvals and fit-out.",
+    title: "Biat Al Ebdaa — Dubai",
+    description: "Biat Al Ebdaa creates refined villa and office interiors across Dubai and Abu Dhabi, with in-house joinery, photorealistic 3D visualization, approvals and fit-out.",
     openGraph: {
-        title: "Arc & Grain Interiors — Dubai",
+        title: "Biat Al Ebdaa — Dubai",
         description: "Thoughtful interiors, designed and made in Dubai.",
         type: "website"
     }
