@@ -223,6 +223,44 @@ export const dictionaries = {
           link: "#"
         }
       ]
+    },
+    ourProcessPage: {
+      navTitle: "Our Process",
+      pageTitle: "How We Work",
+      whatWeDo: "Step-by-Step",
+      processOverview: "Our Working Process",
+      processSubtitle: "We follow a meticulous process to ensure every project is delivered on time, within budget, and beyond expectations.",
+      learnMore: "Learn More ↗",
+      steps: [
+        {
+          num: "01",
+          title: "Discovery & Planning",
+          description: "We start by understanding your vision, requirements, and budget. Our team conducts a thorough site analysis and develops a comprehensive project plan.",
+          image: "/assets/hero-penthouse.png",
+          link: "#"
+        },
+        {
+          num: "02",
+          title: "Design Concept",
+          description: "Our award-winning design team creates mood boards, 3D renderings, and detailed spatial plans to bring your vision to life before construction begins.",
+          image: "/assets/project-office.png",
+          link: "#"
+        },
+        {
+          num: "03",
+          title: "Execution & Build",
+          description: "Our dedicated project managers oversee the entire fit-out process, coordinating with trusted contractors and ensuring the highest quality standards are met.",
+          image: "/assets/project-villa.png",
+          link: "#"
+        },
+        {
+          num: "04",
+          title: "Handover & Support",
+          description: "Upon completion, we conduct a rigorous snagging process and hand over the keys. Our relationship continues with dedicated post-occupancy support.",
+          image: "/assets/cad-render.png",
+          link: "#"
+        }
+      ]
     }
   },
   ar: {
@@ -446,6 +484,44 @@ export const dictionaries = {
           title: "التصميم والبناء",
           description: "نحن نقدم خدمات تصميم وتجهيزات داخلية كاملة في حلول جاهزة بالكامل تساعد في تقليل مخاطر المشروع وتكاليفه، ويمكن أن تؤدي إلى إنجاز أسرع.",
           image: "/assets/project-office.png",
+          link: "#"
+        }
+      ]
+    },
+    ourProcessPage: {
+      navTitle: "عمليتنا",
+      pageTitle: "كيف نعمل",
+      whatWeDo: "خطوة بخطوة",
+      processOverview: "عملية العمل لدينا",
+      processSubtitle: "نحن نتبع عملية دقيقة لضمان تسليم كل مشروع في الوقت المحدد وفي حدود الميزانية وبما يتجاوز التوقعات.",
+      learnMore: "اعرف المزيد ↗",
+      steps: [
+        {
+          num: "01",
+          title: "الاكتشاف والتخطيط",
+          description: "نبدأ بفهم رؤيتك ومتطلباتك وميزانيتك. يقوم فريقنا بإجراء تحليل شامل للموقع ويضع خطة مشروع شاملة.",
+          image: "/assets/hero-penthouse.png",
+          link: "#"
+        },
+        {
+          num: "02",
+          title: "مفهوم التصميم",
+          description: "يقوم فريق التصميم الحائز على جوائز لدينا بإنشاء لوحات مزاجية وتصاميم ثلاثية الأبعاد وخطط مكانية مفصلة لإحياء رؤيتك قبل بدء البناء.",
+          image: "/assets/project-office.png",
+          link: "#"
+        },
+        {
+          num: "03",
+          title: "التنفيذ والبناء",
+          description: "يشرف مديرو المشاريع المخصصون لدينا على عملية التجهيز بأكملها، وينسقون مع المقاولين الموثوق بهم ويضمنون تلبية أعلى معايير الجودة.",
+          image: "/assets/project-villa.png",
+          link: "#"
+        },
+        {
+          num: "04",
+          title: "التسليم والدعم",
+          description: "عند الانتهاء، نجري عملية فحص صارمة ونسلم المفاتيح. تستمر علاقتنا بدعم مخصص بعد الإشغال.",
+          image: "/assets/cad-render.png",
           link: "#"
         }
       ]
