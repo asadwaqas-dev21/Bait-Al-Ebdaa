@@ -149,6 +149,36 @@ export const dictionaries = {
         commercial: "Commercial",
         residential: "Residential"
       }
+    },
+    projectDetailPage: {
+      projectOverview: "Project Overview",
+      stayConnected: "Stay Connected",
+      labels: {
+        location: "Location",
+        sector: "Sector",
+        size: "Size",
+        year: "Year",
+        service: "Service"
+      },
+      projects: {
+        "government-authority": {
+          title: "Confidential Government Authority Headquarters, Dubai Academic City",
+          description: "This confidential government authority headquarters located in Academic City, Dubai, was recently fitted out as a 50,500 sq. ft. workplace spanning three floors.\n\nDelivered with a minimalist, home-like aesthetic, the space embraces soft beige, brown, and white tones, along with natural textures to create an environment that prioritizes employee well-being.\n\nThe workplace was thoughtfully delivered by A&T to foster identity, collaboration, and teamwork. Distinctive department zones encourage interaction and knowledge sharing while reinforcing each team's values and objectives.\n\nEmployee comfort is supported through ergonomic workstations, sit-stand desks, privacy-enhancing elements, and noise-control solutions that promote both focus and flexibility.\n\nA variety of collaboration spaces cater to different work styles and needs, encouraging creativity, inclusivity, and effective collaboration.",
+          metadata: {
+            location: "Academic City, Dubai, UAE",
+            sector: "Commercial",
+            size: "50,500",
+            year: "2026",
+            service: "Interior Fit-Out + MEP Works"
+          },
+          images: [
+            "/assets/project-office.png",
+            "/assets/hero-penthouse.png",
+            "/assets/project-villa.png",
+            "/assets/cad-render.png"
+          ]
+        }
+      }
     }
   },
   ar: {
@@ -300,6 +330,36 @@ export const dictionaries = {
         fnb: "المأكولات والمشروبات",
         commercial: "التجاري",
         residential: "السكني"
+      }
+    },
+    projectDetailPage: {
+      projectOverview: "نظرة عامة على المشروع",
+      stayConnected: "ابق على تواصل",
+      labels: {
+        location: "الموقع",
+        sector: "القطاع",
+        size: "المساحة",
+        year: "السنة",
+        service: "الخدمة"
+      },
+      projects: {
+        "government-authority": {
+          title: "المقر الرئيسي السري لهيئة حكومية، مدينة دبي الأكاديمية",
+          description: "تم تجهيز هذا المقر الرئيسي السري لهيئة حكومية في مدينة دبي الأكاديمية مؤخرًا كمساحة عمل تبلغ مساحتها 50,500 قدم مربع وتمتد على ثلاثة طوابق.\n\nتم تنفيذ المساحة بلمسة جمالية بسيطة ومريحة، وتحتضن درجات اللون البيج والبني والأبيض الناعمة، جنبًا إلى جنب مع الأنسجة الطبيعية لخلق بيئة تعطي الأولوية لرفاهية الموظفين.\n\nتم تنفيذ مكان العمل بعناية لتعزيز الهوية والتعاون والعمل الجماعي. تشجع مناطق الأقسام المتميزة على التفاعل ومشاركة المعرفة مع تعزيز قيم وأهداف كل فريق.\n\nيتم دعم راحة الموظفين من خلال محطات عمل مريحة، ومكاتب للجلوس والوقوف، وعناصر لتعزيز الخصوصية، وحلول للتحكم في الضوضاء تعزز التركيز والمرونة معًا.\n\nتلبي مجموعة متنوعة من مساحات التعاون أنماط العمل والاحتياجات المختلفة، مما يشجع على الإبداع والشمولية والتعاون الفعال.",
+          metadata: {
+            location: "مدينة دبي الأكاديمية، الإمارات",
+            sector: "تجاري",
+            size: "50,500",
+            year: "2026",
+            service: "التجهيزات الداخلية والأعمال الكهروميكانيكية"
+          },
+          images: [
+            "/assets/project-office.png",
+            "/assets/hero-penthouse.png",
+            "/assets/project-villa.png",
+            "/assets/cad-render.png"
+          ]
+        }
       }
     }
   }

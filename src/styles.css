@@ -140,28 +140,31 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 .projects-filter-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  background-color: var(--color-black);
-  padding: 8px;
-  border-radius: 8px;
+  gap: 0;
+  background-color: #000;
+  padding: 0;
+  border: 1px solid #000;
+  border-radius: 6px;
   width: fit-content;
+  overflow: hidden;
 }
 
 .filter-btn {
   background-color: transparent;
-  color: var(--color-white);
+  color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 24px;
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .filter-btn.is-active,
 .filter-btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: #fff;
+  color: #000;
 }
 
 .projects-grid-section {
@@ -251,4 +254,187 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 }
 .site-header--light-theme .menu-button svg path {
   stroke: #000;
+}
+
+/* ==========================================================================
+   PROJECT DETAIL PAGE
+   ========================================================================== */
+
+.project-detail-page {
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+}
+
+.project-detail-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-detail-title {
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  max-width: 800px;
+}
+
+.project-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.stay-connected {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.project-hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  background-color: #f3efe9;
+}
+
+.carousel-image-container {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  z-index: 10;
+}
+
+.carousel-progress {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-counter {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress-bar-bg {
+  width: 150px;
+  height: 2px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.carousel-arrows {
+  display: flex;
+  gap: 16px;
+}
+
+.arrow-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.3s ease;
+}
+.arrow-btn:hover {
+  opacity: 0.7;
+}
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+@media (min-width: 768px) {
+  .project-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-description p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.project-metadata-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  grid-column: span 2;
+}
+
+.metadata-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.metadata-line {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+.metadata-value {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
 }
