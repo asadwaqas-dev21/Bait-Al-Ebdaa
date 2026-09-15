@@ -16,8 +16,8 @@ export const dictionaries = {
     hero: {
       slides: [
         { eyebrow: "Dubai · Abu Dhabi", title: "UAE Turnkey Fit-out & Custom Architectural Joinery", body: "From first sketch to final handover, we design, approve and manufacture singular spaces for modern Gulf living." },
-        { eyebrow: "Workplace", title: "Offices with quiet authority.", body: "High-performing workplaces shaped around your people, brand and commercial priorities." },
-        { eyebrow: "Private residences", title: "Villas, resolved to the last detail.", body: "Architecture, bespoke joinery and intelligent furnishing brought together by one accountable team." }
+        { eyebrow: "Workplace", title: "Executive Workplaces Designed with Quiet Authority & Flow", body: "High-performing workplaces shaped around your people, brand and commercial priorities." },
+        { eyebrow: "Private residences", title: "Luxury Private Villas Resolved to the Last Detail", body: "Architecture, bespoke joinery and intelligent furnishing brought together by one accountable team." }
       ],
       viewWork: "View selected work"
     },
@@ -153,8 +153,8 @@ export const dictionaries = {
     hero: {
       slides: [
         { eyebrow: "دبي · أبوظبي", title: "تجهيز متكامل ونجارة معمارية مخصصة في الإمارات", body: "من المخطط الأول إلى التسليم النهائي، نقوم بتصميم واعتماد وتصنيع مساحات فريدة للحياة الخليجية الحديثة." },
-        { eyebrow: "مساحات العمل", title: "مكاتب بهيبة هادئة.", body: "مساحات عمل عالية الأداء مصممة حول موظفيك وعلامتك التجارية وأولوياتك التجارية." },
-        { eyebrow: "مساكن خاصة", title: "فلل مصممة بأدق التفاصيل.", body: "هندسة معمارية ونجارة مخصصة وأثاث ذكي يجمعها فريق واحد مسؤول." }
+        { eyebrow: "مساحات العمل", title: "مساحات عمل تنفيذية مصممة بهيبة هادئة وتدفق سلس", body: "مساحات عمل عالية الأداء مصممة حول موظفيك وعلامتك التجارية وأولوياتك التجارية." },
+        { eyebrow: "مساكن خاصة", title: "فلل خاصة فاخرة مصممة بأدق التفاصيل المعمارية المميزة", body: "هندسة معمارية ونجارة مخصصة وأثاث ذكي يجمعها فريق واحد مسؤول." }
       ],
       viewWork: "عرض الأعمال المختارة"
     },
