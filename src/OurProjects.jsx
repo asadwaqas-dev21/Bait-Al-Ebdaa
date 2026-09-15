@@ -62,7 +62,9 @@ export default function OurProjects() {
         <section className="shell our-projects-intro section">
           <Reveal className="intro-content">
             <div className="intro-left">
-              <p className="micro">{t.projectsPortfolio}</p>
+              <p className="projects-portfolio-text">
+                {t.projectsPortfolio.split(' ')[0]} <span style={{ borderBottom: '1px solid #000', paddingBottom: '2px' }}>{t.projectsPortfolio.split(' ').slice(1).join(' ')}</span>
+              </p>
               <h2 className="redefining-heading">{t.redefiningHeading}</h2>
             </div>
             <div className="intro-right">
@@ -87,7 +89,7 @@ export default function OurProjects() {
         </section>
 
         {/* Project Grid */}
-        <section className="shell projects-grid-section section">
+        <section className="shell projects-grid-section">
           <div className="projects-grid">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((p, i) => (
