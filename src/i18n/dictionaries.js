@@ -58,10 +58,10 @@ export const dictionaries = {
       title: "Spaces with\na point of view.",
       tools: "Private residences and workplaces designed for the way our clients actually live and work.",
       items: [
-        { title: "Canal House", place: "Dubai Water Canal", type: "Private residence" },
-        { title: "The Foundry Office", place: "DIFC, Dubai", type: "Workplace" },
-        { title: "Courtyard Villa", place: "Saadiyat, Abu Dhabi", type: "Private residence" },
-        { title: "Atelier Suite", place: "Downtown Dubai", type: "Design concept" }
+        { title: "Canal House", place: "Dubai Water Canal", type: "Private residence", category: "residential" },
+        { title: "The Foundry Office", place: "DIFC, Dubai", type: "Workplace", category: "commercial" },
+        { title: "Courtyard Villa", place: "Saadiyat, Abu Dhabi", type: "Private residence", category: "residential" },
+        { title: "Atelier Suite", place: "Downtown Dubai", type: "Design concept", category: "hospitality" }
       ]
     },
     capabilitiesSection: {
@@ -134,6 +134,21 @@ export const dictionaries = {
       backToTop: "Back to the top",
       privacy: "Privacy Policy",
       copy: "Copyright © 2026 Biat Al Ebdaa. All Rights Reserved."
+    },
+    ourProjectsPage: {
+      home: "Home",
+      ourProjects: "Our Projects",
+      explorePortfolio: "Explore Our Project Portfolio",
+      projectsPortfolio: "Projects Portfolio",
+      redefiningHeading: "Redefining Spaces With Bespoke Interior Fit-Out Solutions",
+      redefiningBody: "From fine dining establishments to commercial offices, residential properties, and entertainment venues, we approach each project with passion and precision, ensuring seamless execution and exceptional outcomes tailored to your specific needs.",
+      filters: {
+        all: "All Projects",
+        hospitality: "Hospitality",
+        fnb: "Food And Beverage",
+        commercial: "Commercial",
+        residential: "Residential"
+      }
     }
   },
   ar: {
@@ -195,10 +210,10 @@ export const dictionaries = {
       title: "مساحات مع\nوجهة نظر.",
       tools: "مساكن خاصة ومساحات عمل مصممة للطريقة التي يعيش ويعمل بها عملاؤنا بالفعل.",
       items: [
-        { title: "منزل القناة", place: "قناة دبي المائية", type: "سكن خاص" },
-        { title: "مكتب المسبك", place: "مركز دبي المالي العالمي، دبي", type: "مساحة عمل" },
-        { title: "فيلا كورتيارد", place: "السعديات، أبوظبي", type: "سكن خاص" },
-        { title: "جناح أتيليه", place: "وسط مدينة دبي", type: "مفهوم التصميم" }
+        { title: "منزل القناة", place: "قناة دبي المائية", type: "سكن خاص", category: "residential" },
+        { title: "مكتب المسبك", place: "مركز دبي المالي العالمي، دبي", type: "مساحة عمل", category: "commercial" },
+        { title: "فيلا كورتيارد", place: "السعديات، أبوظبي", type: "سكن خاص", category: "residential" },
+        { title: "جناح أتيليه", place: "وسط مدينة دبي", type: "مفهوم التصميم", category: "hospitality" }
       ]
     },
     capabilitiesSection: {
@@ -271,6 +286,21 @@ export const dictionaries = {
       backToTop: "العودة للأعلى",
       privacy: "سياسة الخصوصية",
       copy: "حقوق الطبع والنشر © 2026 بيت الإبداع. جميع الحقوق محفوظة."
+    },
+    ourProjectsPage: {
+      home: "الرئيسية",
+      ourProjects: "مشاريعنا",
+      explorePortfolio: "استكشف محفظة مشاريعنا",
+      projectsPortfolio: "محفظة المشاريع",
+      redefiningHeading: "إعادة تعريف المساحات بحلول تجهيز داخلي مخصصة",
+      redefiningBody: "من مؤسسات تناول الطعام الفاخرة إلى المكاتب التجارية والعقارات السكنية وأماكن الترفيه، نتعامل مع كل مشروع بشغف ودقة، مما يضمن التنفيذ السلس والنتائج الاستثنائية المصممة خصيصاً لاحتياجاتك.",
+      filters: {
+        all: "جميع المشاريع",
+        hospitality: "الضيافة",
+        fnb: "المأكولات والمشروبات",
+        commercial: "التجاري",
+        residential: "السكني"
+      }
     }
   }
 };
