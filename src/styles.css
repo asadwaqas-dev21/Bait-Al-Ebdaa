@@ -230,3 +230,25 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 140px 0 0 0 !important;
 }
+
+/* ==========================================================================
+   HEADER LIGHT THEME
+   ========================================================================== */
+.site-header--light-theme {
+  background-color: transparent !important;
+  color: #000 !important;
+}
+.site-header--light-theme.site-header--solid {
+  background-color: #fff !important;
+}
+.site-header--light-theme .brand {
+  color: #000 !important;
+}
+.site-header--light-theme .header-links a,
+.site-header--light-theme .menu-button,
+.site-header--light-theme .lang-switcher {
+  color: #000 !important;
+}
+.site-header--light-theme .menu-button svg path {
+  stroke: #000;
+}

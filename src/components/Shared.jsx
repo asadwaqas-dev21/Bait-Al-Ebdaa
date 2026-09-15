@@ -24,7 +24,7 @@ export function Reveal({ as: Tag = "div", className = "", children, delay = 0, .
   return <Tag ref={ref} className={`reveal ${className}`} style={{ "--delay": `${delay}ms` }} {...props}>{children}</Tag>;
 }
 
-export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLogo = false }) {
+export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLogo = false, lightTheme = false }) {
   const { lang, dict } = useI18n();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
@@ -37,8 +37,8 @@ export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLo
   };
 
   return <>
-    <header className={`site-header ${scrolled || menuOpen || alwaysSolid ? "site-header--solid" : ""}`}>
-      <Brand light={!menuOpen && !useFooterLogo && !alwaysSolid} priority customSrc={useFooterLogo ? "/assets/footer logo.png" : null} />
+    <header className={`site-header ${scrolled || menuOpen || alwaysSolid ? "site-header--solid" : ""} ${lightTheme ? "site-header--light-theme" : ""}`}>
+      <Brand light={!menuOpen && !useFooterLogo && !alwaysSolid && !lightTheme} priority customSrc={useFooterLogo ? "/assets/footer logo.png" : null} />
       <nav className="header-links" aria-label="Primary navigation">
         <a href={`/${lang}/our-projects`}>{dict.nav.projects} <ArrowUpRight size={14} /></a>
         <a href="/#services">{dict.nav.services} <ArrowUpRight size={14} /></a>
