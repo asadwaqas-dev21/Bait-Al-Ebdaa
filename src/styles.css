@@ -222,3 +222,11 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   gap: 16px;
   line-height: 1.4;
 }
+
+.projects-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 140px 0 0 0 !important;
+}

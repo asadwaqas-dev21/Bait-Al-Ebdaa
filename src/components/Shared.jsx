@@ -37,8 +37,8 @@ export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLo
   };
 
   return <>
-    <header className={`site-header ${scrolled || menuOpen ? "site-header--solid" : ""}`}>
-      <Brand light={!menuOpen} priority />
+    <header className={`site-header ${scrolled || menuOpen || alwaysSolid ? "site-header--solid" : ""}`}>
+      <Brand light={!menuOpen && !useFooterLogo && !alwaysSolid} priority customSrc={useFooterLogo ? "/assets/footer logo.png" : null} />
       <nav className="header-links" aria-label="Primary navigation">
         <a href={`/${lang}/our-projects`}>{dict.nav.projects} <ArrowUpRight size={14} /></a>
         <a href="/#services">{dict.nav.services} <ArrowUpRight size={14} /></a>

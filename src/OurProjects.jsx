@@ -37,7 +37,7 @@ export default function OurProjects() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} alwaysSolid={true} useFooterLogo={true} />
       <main className="our-projects-page">
         {/* Top Bar: Active Tab and Breadcrumbs */}
-        <div className="shell pt-32 pb-4 projects-top-bar">
+        <div className="shell projects-top-bar">
           <div className="projects-active-tab">
             <span>{t.ourProjects}</span>
             <div className="tab-underline"></div>
