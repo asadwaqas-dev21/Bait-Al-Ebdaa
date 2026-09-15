@@ -6,8 +6,8 @@ import { ArrowUp, ArrowUpRight, Menu, X, Globe } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
 import { useRouter } from "next/navigation";
 
-export function Brand({ light = false, priority = false }) {
-  return <a className={`brand ${light ? "brand--light" : ""}`} href="/" aria-label="Biat Al Ebdaa home"><Image className="brand__logo" src="/assets/logo.png" alt="Biat Al Ebdaa - Luxury Interior Design and Joinery Logo" width={2170} height={725} priority={priority} /></a>;
+export function Brand({ light = false, priority = false, customSrc = null }) {
+  return <a className={`brand ${light ? "brand--light" : ""}`} href="/" aria-label="Biat Al Ebdaa home"><Image className="brand__logo" src={customSrc || "/assets/logo.png"} alt="Biat Al Ebdaa - Luxury Interior Design and Joinery Logo" width={2170} height={725} priority={priority} /></a>;
 }
 
 export function Reveal({ as: Tag = "div", className = "", children, delay = 0, ...props }) {
@@ -24,7 +24,7 @@ export function Reveal({ as: Tag = "div", className = "", children, delay = 0, .
   return <Tag ref={ref} className={`reveal ${className}`} style={{ "--delay": `${delay}ms` }} {...props}>{children}</Tag>;
 }
 
-export function Header({ menuOpen, setMenuOpen }) {
+export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLogo = false }) {
   const { lang, dict } = useI18n();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);

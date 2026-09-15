@@ -34,11 +34,17 @@ export default function OurProjects() {
 
   return (
     <>
-      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} alwaysSolid={true} useFooterLogo={true} />
       <main className="our-projects-page">
-        {/* Breadcrumbs */}
-        <div className="shell pt-32 pb-4 breadcrumbs">
-          <p>{t.home} &nbsp;&gt;&nbsp; <strong>{t.ourProjects}</strong></p>
+        {/* Top Bar: Active Tab and Breadcrumbs */}
+        <div className="shell pt-32 pb-4 projects-top-bar">
+          <div className="projects-active-tab">
+            <span>{t.ourProjects}</span>
+            <div className="tab-underline"></div>
+          </div>
+          <div className="breadcrumbs">
+            <p>{t.home} &nbsp;&#9656;&nbsp; <strong>{t.ourProjects}</strong></p>
+          </div>
         </div>
 
         {/* Hero Section */}
