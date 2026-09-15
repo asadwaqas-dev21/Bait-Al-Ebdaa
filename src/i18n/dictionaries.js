@@ -199,6 +199,30 @@ export const dictionaries = {
         { title: "L'ETO Caffe Arrives at Dubai Creek Harbour", image: "/assets/project-office.png", link: "#" },
         { title: "A&T Group Interiors Delivers Cloud Spaces in Riyadh", image: "/assets/project-villa.png", link: "#" }
       ]
+    },
+    ourServicesPage: {
+      navTitle: "Our Services",
+      pageTitle: "Our Services & Interior Solutions",
+      whatWeOffer: "What Do We Offer",
+      comprehensiveOfferings: "Comprehensive Service Offerings",
+      offeringsSubtitle: "We provide customized interior solutions tailored every project need.",
+      learnMore: "Learn More ↗",
+      services: [
+        {
+          num: "01",
+          title: "Interior Fit Out",
+          description: "We work closely with your architect, designer, or project manager to deliver top-quality interior fit-out services, including MEP, furniture, and finishes.",
+          image: "/assets/hero-penthouse.png",
+          link: "#"
+        },
+        {
+          num: "02",
+          title: "Design and Build",
+          description: "We provide complete design and interior fit-out services in full turnkey solutions helping to reduce project risks and costs, and can lead to faster completion.",
+          image: "/assets/project-office.png",
+          link: "#"
+        }
+      ]
     }
   },
   ar: {
@@ -400,6 +424,30 @@ export const dictionaries = {
         { title: "مجموعة إيه آند تي للتصميم الداخلي تكمل تجهيزات مطعم تاتو، دبي", image: "/assets/hero-penthouse.png", link: "#" },
         { title: "مقهى ليتو يصل إلى ميناء خور دبي", image: "/assets/project-office.png", link: "#" },
         { title: "مجموعة إيه آند تي للتصميم الداخلي تسلم مساحات السحابة في الرياض", image: "/assets/project-villa.png", link: "#" }
+      ]
+    },
+    ourServicesPage: {
+      navTitle: "خدماتنا",
+      pageTitle: "خدماتنا وحلول التصميم الداخلي",
+      whatWeOffer: "ماذا نقدم",
+      comprehensiveOfferings: "عروض الخدمات الشاملة",
+      offeringsSubtitle: "نحن نقدم حلولًا داخلية مخصصة ومصممة لتلبية احتياجات كل مشروع.",
+      learnMore: "اعرف المزيد ↗",
+      services: [
+        {
+          num: "01",
+          title: "التجهيزات الداخلية",
+          description: "نعمل عن كثب مع المهندس المعماري أو المصمم أو مدير المشروع لتقديم خدمات تجهيزات داخلية عالية الجودة، بما في ذلك الأعمال الميكانيكية والكهربائية والسباكة والأثاث والتشطيبات.",
+          image: "/assets/hero-penthouse.png",
+          link: "#"
+        },
+        {
+          num: "02",
+          title: "التصميم والبناء",
+          description: "نحن نقدم خدمات تصميم وتجهيزات داخلية كاملة في حلول جاهزة بالكامل تساعد في تقليل مخاطر المشروع وتكاليفه، ويمكن أن تؤدي إلى إنجاز أسرع.",
+          image: "/assets/project-office.png",
+          link: "#"
+        }
       ]
     }
   }
