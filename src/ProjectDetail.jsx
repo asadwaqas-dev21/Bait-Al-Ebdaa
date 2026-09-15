@@ -4,29 +4,21 @@ import Image from "next/image";
 import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Youtube, ArrowLeft, ArrowRight } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
-import { Header, Footer, Reveal } from "./components/Shared";
+import { Header, Footer, Reveal, PageHeader } from "./components/Shared";
 
 export default function ProjectDetail({ slug }) {
-  const { dict } = useI18n();
+  const { lang, dict } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const t = dict.projectDetailPage;
-  const projectData = t.projects[slug];
+  // Use government-authority as fallback if slug not found
+  const projectData = t.projects[slug] || t.projects['government-authority'];
+  const images = projectData.images;
 
-  if (!projectData) {
-    return <div>Project not found</div>;
-  }
-
-  const images = projectData.images || [];
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  // Simple carousel logic
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
   const progressPercentage = ((currentImageIndex + 1) / images.length) * 100;
 
@@ -35,22 +27,11 @@ export default function ProjectDetail({ slug }) {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} useFooterLogo={true} lightTheme={true} />
       
       <main className="project-detail-page">
-        {/* Top Bar */}
-        <div className="shell projects-top-bar">
-          <div className="projects-active-tab">
-            <span>{t.projectOverview}</span>
-            <div className="tab-underline"></div>
-          </div>
-          <div className="breadcrumbs">
-            <p>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; {t.projectOverview} &nbsp;&#9656;&nbsp; <strong>{projectData.title.length > 30 ? projectData.title.substring(0, 30) + '...' : projectData.title}</strong></p>
-          </div>
-        </div>
-
-        {/* Title & Social Section */}
-        <section className="shell project-detail-title-section">
-          <Reveal>
-            <h1 className="project-detail-title">{projectData.title}</h1>
-          </Reveal>
+        <PageHeader 
+          kicker={t.projectOverview}
+          breadcrumbs={<>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; {t.projectOverview} &nbsp;&#9656;&nbsp; <strong>{projectData.title.length > 30 ? projectData.title.substring(0, 30) + '...' : projectData.title}</strong></>}
+          title={projectData.title}
+        >
           <div className="project-social">
             <span className="stay-connected">{t.stayConnected}</span>
             <div className="social-icons">
@@ -60,7 +41,7 @@ export default function ProjectDetail({ slug }) {
               <a href="#" aria-label="YouTube"><Youtube size={18} /></a>
             </div>
           </div>
-        </section>
+        </PageHeader>
 
         {/* Hero Carousel */}
         <section className="project-hero-carousel">

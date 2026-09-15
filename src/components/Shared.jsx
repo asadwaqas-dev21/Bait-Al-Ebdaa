@@ -139,3 +139,28 @@ export function Footer() {
     </div>
   </footer>;
 }
+
+export function PageHeader({ kicker, breadcrumbs, title, children }) {
+  return (
+    <>
+      {/* Top Bar */}
+      <div className="shell projects-top-bar">
+        <div className="projects-active-tab">
+          <span>{kicker}</span>
+          <div className="tab-underline"></div>
+        </div>
+        <div className="breadcrumbs">
+          <p>{breadcrumbs}</p>
+        </div>
+      </div>
+
+      {/* Title */}
+      <section className="shell page-title-section project-detail-title-section">
+        <Reveal>
+          <h1 className="project-detail-title">{title}</h1>
+        </Reveal>
+        {children}
+      </section>
+    </>
+  );
+}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
-import { Header, Footer, Reveal } from "./components/Shared";
+import { Header, Footer, Reveal, PageHeader } from "./components/Shared";
 
 export default function Process() {
   const { lang, dict } = useI18n();
@@ -17,23 +17,11 @@ export default function Process() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} useFooterLogo={true} lightTheme={true} />
       
       <main className="services-page">
-        {/* Top Bar */}
-        <div className="shell projects-top-bar">
-          <div className="projects-active-tab">
-            <span>{t.navTitle}</span>
-            <div className="tab-underline"></div>
-          </div>
-          <div className="breadcrumbs">
-            <p>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; <strong>{t.navTitle}</strong></p>
-          </div>
-        </div>
-
-        {/* Title */}
-        <section className="shell services-title-section">
-          <Reveal>
-            <h1 className="services-page-title">{t.pageTitle}</h1>
-          </Reveal>
-        </section>
+        <PageHeader 
+          kicker={t.navTitle}
+          breadcrumbs={<>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; <strong>{t.navTitle}</strong></>}
+          title={t.pageTitle}
+        />
 
         {/* Hero Section */}
         <section className="services-hero-section">

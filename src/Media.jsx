@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
-import { Header, Footer, Reveal } from "./components/Shared";
+import { Header, Footer, Reveal, PageHeader } from "./components/Shared";
 
 export default function Media() {
   const { lang, dict } = useI18n();
@@ -25,23 +25,11 @@ export default function Media() {
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} useFooterLogo={true} lightTheme={true} />
       
       <main className="media-page">
-        {/* Top Bar */}
-        <div className="shell projects-top-bar">
-          <div className="projects-active-tab">
-            <span>{t.newsAndInsights}</span>
-            <div className="tab-underline"></div>
-          </div>
-          <div className="breadcrumbs">
-            <p>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; <strong>Media</strong></p>
-          </div>
-        </div>
-
-        {/* Title */}
-        <section className="shell media-title-section">
-          <Reveal>
-            <h1 className="media-page-title">{t.latestNewsAndInsights}</h1>
-          </Reveal>
-        </section>
+        <PageHeader 
+          kicker={t.newsAndInsights}
+          breadcrumbs={<>{dict.ourProjectsPage.home} &nbsp;&#9656;&nbsp; <strong>Media</strong></>}
+          title={t.latestNewsAndInsights}
+        />
 
         {/* Bento Grid */}
         <section className="shell media-grid-section">

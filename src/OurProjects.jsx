@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
-import { Header, Footer, Reveal } from "./components/Shared";
+import { Header, Footer, Reveal, PageHeader } from "./components/Shared";
 
 export default function OurProjects() {
   const { lang, dict } = useI18n();
@@ -36,23 +36,11 @@ export default function OurProjects() {
     <>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} useFooterLogo={true} lightTheme={true} />
       <main className="our-projects-page">
-        {/* Top Bar: Active Tab and Breadcrumbs */}
-        <div className="shell projects-top-bar">
-          <div className="projects-active-tab">
-            <span>{t.ourProjects}</span>
-            <div className="tab-underline"></div>
-          </div>
-          <div className="breadcrumbs">
-            <p>{t.home} &nbsp;&#9656;&nbsp; <strong>{t.ourProjects}</strong></p>
-          </div>
-        </div>
-
-        {/* Hero Section */}
-        <section className="shell">
-          <Reveal>
-            <h1 className="our-projects-title">{t.explorePortfolio}</h1>
-          </Reveal>
-        </section>
+        <PageHeader 
+          kicker={t.ourProjects}
+          breadcrumbs={<>{t.home} &nbsp;&#9656;&nbsp; <strong>{t.ourProjects}</strong></>}
+          title={t.explorePortfolio}
+        />
         
         <div className="our-projects-hero-image">
           <Image src="/assets/project-office.png" alt="Projects Hero" fill sizes="100vw" priority style={{ objectFit: 'cover' }} />
