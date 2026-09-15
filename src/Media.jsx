@@ -44,7 +44,7 @@ export default function Media() {
         </section>
 
         {/* Bento Grid */}
-        <section className="shell media-grid-section section">
+        <section className="shell media-grid-section">
           <div className="media-grid">
             
             {/* Featured Item (Spans 2 columns) */}

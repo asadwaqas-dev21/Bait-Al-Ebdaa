@@ -1,4 +1,4 @@
-import ProjectDetail from "../../../../../ProjectDetail";
+import ProjectDetail from "../../../../ProjectDetail";
 
 export function generateStaticParams() {
   return [
@@ -6,6 +6,7 @@ export function generateStaticParams() {
   ];
 }
 
-export default function ProjectDetailPage({ params }) {
-  return <ProjectDetail slug={params.slug} />;
+export default async function ProjectDetailPage({ params }) {
+  const resolvedParams = await params;
+  return <ProjectDetail slug={resolvedParams.slug} />;
 }
