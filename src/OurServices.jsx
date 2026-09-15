@@ -11,6 +11,7 @@ export default function OurServices() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const t = dict.ourServicesPage;
+  const faq = dict.faqSection;
   
   return (
     <>
@@ -95,15 +96,19 @@ export default function OurServices() {
         </section>
 
         {/* FAQ Section */}
-        <section className="shell faq-section section">
-          <Reveal className="faq-header" delay={100}>
-            <h2>{dict.faqSection?.title || "Frequently Asked Questions"}</h2>
-          </Reveal>
-          
-          <div className="faq-list">
-            {(dict.faqSection?.items || []).map((faq, index) => (
-              <FaqItem key={index} index={index} faq={faq} />
-            ))}
+        <section className="faq-section" aria-labelledby="services-faq-title">
+          <div className="shell faq-shell">
+            <Reveal className="faq-header" delay={100}>
+              <p className="faq-kicker">{faq.kicker}</p>
+              <h2 id="services-faq-title">{faq.title}</h2>
+              <p className="faq-subtitle">{faq.subtitle}</p>
+            </Reveal>
+
+            <div className="faq-list">
+              {faq.items.map((item, index) => (
+                <FaqItem key={item.q} index={index} faq={item} />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -114,21 +119,28 @@ export default function OurServices() {
 }
 
 function FaqItem({ index, faq }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(index === 0);
+  const answerId = `services-faq-answer-${index}`;
   
   return (
     <Reveal className={`faq-item ${isOpen ? 'is-open' : ''}`} delay={100 + (index * 50)}>
-      <button className="faq-question" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
+      <button
+        type="button"
+        className="faq-question"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls={answerId}
+      >
         <div className="faq-question-text">
-          <span className="faq-num">{(index + 1).toString().padStart(2, '0')}.</span>
+          <span className="faq-num" aria-hidden="true">{index + 1}</span>
           <h3>{faq.q}</h3>
         </div>
-        <div className={`faq-icon-wrapper ${isOpen ? 'icon-open' : ''}`}>
+        <span className="faq-icon-wrapper" aria-hidden="true">
           {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </div>
+        </span>
       </button>
-      
-      <div className="faq-answer-wrapper" style={{ maxHeight: isOpen ? '500px' : '0', overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
+
+      <div id={answerId} className="faq-answer-wrapper" aria-hidden={!isOpen}>
         <div className="faq-answer">
           <p>{faq.a}</p>
         </div>

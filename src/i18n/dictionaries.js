@@ -102,7 +102,9 @@ export const dictionaries = {
       ]
     },
     faqSection: {
+      kicker: "Got questions?",
       title: "Frequently Asked Questions",
+      subtitle: "Everything you need to know about planning and delivering your interior project with Bait Al Ebdaa.",
       items: [
         {
           q: "Does Bait Al Ebdaa handle Dubai Municipality & Civil Defense approvals?",
@@ -409,7 +411,9 @@ export const dictionaries = {
       bookSurvey: "حجز مسح واقتباس رسمي"
     },
     faqSection: {
+      kicker: "لديك أسئلة؟",
       title: "الأسئلة الشائعة",
+      subtitle: "كل ما تحتاج إلى معرفته حول تخطيط وتنفيذ مشروعك الداخلي مع بيت الإبداع.",
       items: [
         {
           q: "هل تتعامل شركة بيت الإبداع مع موافقات بلدية دبي والدفاع المدني؟",
