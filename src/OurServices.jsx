@@ -99,7 +99,10 @@ export default function OurServices() {
         <section className="faq-section" aria-labelledby="services-faq-title">
           <div className="shell faq-shell">
             <Reveal className="faq-header" delay={100}>
-              <p className="faq-kicker">{faq.kicker}</p>
+              <div className="offerings-kicker">
+                <span>{faq.kicker}</span>
+                <div className="kicker-underline"></div>
+              </div>
               <h2 id="services-faq-title">{faq.title}</h2>
               <p className="faq-subtitle">{faq.subtitle}</p>
             </Reveal>

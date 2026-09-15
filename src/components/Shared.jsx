@@ -11,17 +11,18 @@ export function Brand({ light = false, priority = false, customSrc = null }) {
 }
 
 export function Reveal({ as: Tag = "div", className = "", children, delay = 0, ...props }) {
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) { element.classList.add("is-visible"); observer.unobserve(element); }
+      if (entry.isIntersecting) { setIsVisible(true); observer.unobserve(element); }
     }, { threshold: 0.14 });
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
-  return <Tag ref={ref} className={`reveal ${className}`} style={{ "--delay": `${delay}ms` }} {...props}>{children}</Tag>;
+  return <Tag ref={ref} className={`reveal ${className} ${isVisible ? 'is-visible' : ''}`} style={{ "--delay": `${delay}ms` }} {...props}>{children}</Tag>;
 }
 
 export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLogo = false, lightTheme = false }) {
