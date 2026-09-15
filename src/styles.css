@@ -506,6 +506,12 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   }
 }
 
+@media (min-width: 1024px) {
+  .media-card--featured {
+    grid-row: span 2;
+  }
+}
+
 .media-image-wrapper {
   position: relative;
   width: 100%;
