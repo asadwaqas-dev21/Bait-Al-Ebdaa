@@ -12,7 +12,7 @@ export const dictionaries = {
       newEnquiries: "New enquiries",
       menuNote: "Design · Approvals · Fit-out · Joinery"
     },
-    menuItems: ["Home", "Studio", "Services", "Projects", "Process", "Contact"],
+    menuItems: ["Home", "Services", "Projects", "Process", "Contact"],
     hero: {
       slides: [
         { eyebrow: "Dubai · Abu Dhabi", title: "UAE Turnkey Fit-out & Custom Architectural Joinery", body: "From first sketch to final handover, we design, approve and manufacture singular spaces for modern Gulf living." },
@@ -320,7 +320,7 @@ export const dictionaries = {
       newEnquiries: "استفسارات جديدة",
       menuNote: "تصميم · موافقات · تجهيز · نجارة"
     },
-    menuItems: ["الرئيسية", "الاستوديو", "الخدمات", "المشاريع", "العملية", "اتصل بنا"],
+    menuItems: ["الرئيسية", "الخدمات", "المشاريع", "العملية", "اتصل بنا"],
     hero: {
       slides: [
         { eyebrow: "دبي · أبوظبي", title: "تجهيز متكامل ونجارة معمارية مخصصة في الإمارات", body: "من المخطط الأول إلى التسليم النهائي، نقوم بتصميم واعتماد وتصنيع مساحات فريدة للحياة الخليجية الحديثة." },

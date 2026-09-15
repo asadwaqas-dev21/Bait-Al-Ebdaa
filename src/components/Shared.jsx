@@ -59,10 +59,12 @@ export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLo
     </header>
     <div id="site-menu" className={`menu-overlay ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
       <div className="menu-overlay__main">
-        {["Home", "Studio", "Services", "Projects", "Process", "Contact"].map((item, i) => {
-          let href = `/#${item.toLowerCase()}`;
-          if (item === "Home") href = "/";
+        {["Home", "Services", "Projects", "Process", "Contact"].map((item, i) => {
+          let href = `/${lang}`;
           if (item === "Projects") href = `/${lang}/our-projects`;
+          else if (item === "Services") href = `/${lang}/our-services`;
+          else if (item === "Process") href = `/${lang}/process`;
+          else if (item === "Contact") href = `/${lang}#contact`;
           return <a key={item} href={href} onClick={() => setMenuOpen(false)}>{dict.menuItems[i]}</a>
         })}
       </div>

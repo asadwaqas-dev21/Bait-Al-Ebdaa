@@ -1233,3 +1233,12 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   color: var(--ink);
   line-height: 1.4;
 }
+
+@media (max-width: 700px) {
+  .projects-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 110px 0 24px 0 !important;
+  }
+}

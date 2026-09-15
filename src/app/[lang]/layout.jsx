@@ -26,6 +26,7 @@ const tajawal = Tajawal({
 export function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'ar' }];
 }
+export const dynamicParams = false;
 
 export const metadata = {
   metadataBase: new URL('https://al-ebdaa.vercel.app'),
