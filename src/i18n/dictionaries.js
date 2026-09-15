@@ -179,6 +179,26 @@ export const dictionaries = {
           ]
         }
       }
+    },
+    mediaPage: {
+      newsAndInsights: "News & Insights",
+      latestNewsAndInsights: "Latest News & Insights",
+      readMore: "Read More ↗",
+      viewMore: "View More ↗",
+      featuredArticle: {
+        title: "Inside Red Sea Global Residences' Experience Center",
+        description: "Red Sea Global Residences Experience Center is an immersive center crafted to connect potential buyers with the essence of barefoot luxury. Guided by the Memories of Tomorrow concept, space integrates a natural material palette with state-of-the-art technology to create a sales experience that feels as authentic as the lifestyle it represents.",
+        image: "/assets/hero-penthouse.png",
+        link: "#"
+      },
+      articles: [
+        { title: "A&T Group Interiors Recognized in the 2026 CID Fit-Out Firm Powerlist", image: "/assets/project-office.png", link: "#" },
+        { title: "A&T Group Interiors Earns Four CID Hospitality Awards 2026 Nominations", image: "/assets/project-villa.png", link: "#" },
+        { title: "Pastamamma Expands to Riyadh with A&T Group Interiors Fit-Out", image: "/assets/cad-render.png", link: "#" },
+        { title: "A&T Group Interiors Completes Fit-Out for Tattu Restaurant, Dubai", image: "/assets/hero-penthouse.png", link: "#" },
+        { title: "L'ETO Caffe Arrives at Dubai Creek Harbour", image: "/assets/project-office.png", link: "#" },
+        { title: "A&T Group Interiors Delivers Cloud Spaces in Riyadh", image: "/assets/project-villa.png", link: "#" }
+      ]
     }
   },
   ar: {
@@ -361,6 +381,26 @@ export const dictionaries = {
           ]
         }
       }
+    },
+    mediaPage: {
+      newsAndInsights: "الأخبار والرؤى",
+      latestNewsAndInsights: "أحدث الأخبار والرؤى",
+      readMore: "اقرأ المزيد ↗",
+      viewMore: "عرض المزيد ↗",
+      featuredArticle: {
+        title: "داخل مركز تجربة ريزيدنسز البحر الأحمر العالمية",
+        description: "مركز تجربة ريزيدنسز البحر الأحمر العالمية هو مركز غامر تم تصميمه لربط المشترين المحتملين بجوهر الفخامة. مسترشدًا بمفهوم ذكريات الغد، تدمج المساحة لوحة مواد طبيعية مع أحدث التقنيات لخلق تجربة مبيعات تبدو أصلية مثل أسلوب الحياة الذي تمثله.",
+        image: "/assets/hero-penthouse.png",
+        link: "#"
+      },
+      articles: [
+        { title: "مجموعة إيه آند تي للتصميم الداخلي ضمن قائمة أقوى شركات التجهيزات لعام 2026", image: "/assets/project-office.png", link: "#" },
+        { title: "مجموعة إيه آند تي للتصميم الداخلي تحصل على أربعة ترشيحات لجوائز الضيافة 2026", image: "/assets/project-villa.png", link: "#" },
+        { title: "باستاماما تتوسع إلى الرياض بتجهيزات من مجموعة إيه آند تي للتصميم الداخلي", image: "/assets/cad-render.png", link: "#" },
+        { title: "مجموعة إيه آند تي للتصميم الداخلي تكمل تجهيزات مطعم تاتو، دبي", image: "/assets/hero-penthouse.png", link: "#" },
+        { title: "مقهى ليتو يصل إلى ميناء خور دبي", image: "/assets/project-office.png", link: "#" },
+        { title: "مجموعة إيه آند تي للتصميم الداخلي تسلم مساحات السحابة في الرياض", image: "/assets/project-villa.png", link: "#" }
+      ]
     }
   }
 };

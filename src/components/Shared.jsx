@@ -41,7 +41,7 @@ export function Header({ menuOpen, setMenuOpen, alwaysSolid = false, useFooterLo
       <Brand light={!menuOpen && !useFooterLogo && !alwaysSolid && !lightTheme} priority customSrc={useFooterLogo ? "/assets/footer logo.png" : null} />
       <nav className="header-links" aria-label="Primary navigation">
         <a href={`/${lang}/our-projects`}>{dict.nav.projects} <ArrowUpRight size={14} /></a>
-        <a href="/#services">{dict.nav.services} <ArrowUpRight size={14} /></a>
+        <a href={`/${lang}/media`}>{dict.nav.media || "Media"} <ArrowUpRight size={14} /></a>
         <button type="button" onClick={toggleLanguage} className="lang-switcher" style={{display: 'flex', alignItems: 'center', gap: '6px', background: 'transparent', border: 'none', color: 'inherit', cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit'}}>
           <Globe size={14} /> {lang === "en" ? "العربية" : "English"}
         </button>
