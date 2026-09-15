@@ -102,6 +102,31 @@ export const dictionaries = {
         ["Make", "Joinery production, fit-out, installation and considered handover."]
       ]
     },
+    faqSection: {
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          q: "Does Bait Al Ebdaa handle Dubai Municipality & Civil Defense approvals?",
+          a: "Yes, absolutely. We take full ownership of the entire approvals process on your behalf. Our dedicated in-house compliance team meticulously manages all end-to-end NOC permits, complex structural drawings, and final completion certificates directly with Dubai Municipality (DM), Dubai Development Authority (DDA), Trakhees, Abu Dhabi Municipality (ADM), and Civil Defense, ensuring complete regulatory peace of mind and strict adherence to timelines."
+        },
+        {
+          q: "What materials and wood types are used in your 15,000 sq ft Dubai factory?",
+          a: "We exclusively source and utilize high-quality, sustainable materials tailored to luxury environments. This includes premium solid hardwoods, meticulously matched custom veneers, and resilient engineered woods sourced from trusted global suppliers. Our state-of-the-art DIP-2 manufacturing facility is fully equipped with advanced machinery to handle incredibly complex acoustic panelling and bespoke hospitality millwork, ensuring flawless precision, durability, and a truly premium finish."
+        },
+        {
+          q: "Are motorized curtains compatible with smart home automation systems?",
+          a: "Yes, our custom Somfy motorized curtains are engineered to integrate seamlessly with all major smart home automation ecosystems, including Lutron, Crestron, and KNX. This intelligent integration allows you to effortlessly control natural lighting, privacy, and ambiance throughout your property using intuitive smartphone applications, dedicated wall panels, or convenient voice commands, ultimately elevating both the comfort and the modern sophistication of your space."
+        },
+        {
+          q: "What is the typical turnkey execution timeline for a villa in Dubai?",
+          a: "A typical full turnkey execution for a luxury villa in Dubai generally ranges from three to six months. However, this timeline is highly dependent on the overall scope, spatial scale, and the specific, intricate customization requirements of your unique project. During the initial planning phase, we provide a highly detailed, transparent timeline that outlines every critical milestone from concept to final handover."
+        },
+        {
+          q: "Is the initial site survey and 3D layout consultation free of charge?",
+          a: "Yes, we proudly offer a complimentary initial site survey and a comprehensive in-person consultation to deeply understand your unique spatial requirements. Our experienced design experts will thoroughly discuss your vision, evaluate the site conditions, and provide a preliminary conceptual overview. Once we have aligned on the initial direction, we then proceed to develop the highly detailed, photorealistic 3D CAD rendering packages."
+        }
+      ]
+    },
     contactSection: {
       mainHeading: "Let's Talk",
       heading: "I'm applying for",
@@ -364,6 +389,50 @@ export const dictionaries = {
         ["تصور", "خطط، مواد وتصاميم CAD ثلاثية الأبعاد واقعية."],
         ["اعتمد", "حزم تقنية، تنسيق مع بلدية دبي وشهادات عدم الممانعة."],
         ["اصنع", "إنتاج النجارة، التجهيز، التركيب وتسليم مدروس."]
+      ]
+    },
+    estimatorSection: {
+      kicker: "حاسبة التكلفة الفورية",
+      title: "محرك تقدير الاستثمار الشامل",
+      subtitle: "حدد حجم عقارك ونطاق العمل لحساب التكلفة التقديرية لتجهيز مشروعك بالعملة التي تختارها.",
+      propertySize: "حجم العقار (قدم مربع)",
+      scope: "تحديد النطاق",
+      scopeOptions: ["تسليم مفتاح كامل", "نجارة المصنع", "ستائر سومفي"],
+      location: "الإمارة",
+      locationOptions: ["دبي (بلدية دبي)", "أبوظبي (بلدية أبوظبي)"],
+      estimatedInvestment: "الاستثمار المقدر",
+      calculatedValue: "قيمة العقد المحسوبة",
+      inclusions: [
+        "حزمة CAD معمارية ثلاثية الأبعاد",
+        "شهادة عدم ممانعة 100% من البلدية",
+        "15 ألف قدم مربع من إنتاج النجارة",
+        "ضمان 5 سنوات على جودة العمل"
+      ],
+      bookSurvey: "حجز مسح واقتباس رسمي"
+    },
+    faqSection: {
+      title: "الأسئلة الشائعة",
+      items: [
+        {
+          q: "هل تتعامل شركة بيت الإبداع مع موافقات بلدية دبي والدفاع المدني؟",
+          a: "نعم، بالتأكيد. نحن نتحمل المسؤولية الكاملة عن عملية الموافقات بأكملها نيابة عنك. يدير فريق الامتثال الداخلي المخصص لدينا بدقة جميع تصاريح عدم الممانعة الشاملة والرسومات الهيكلية المعقدة وشهادات الإنجاز النهائية مباشرة مع بلدية دبي وسلطة دبي للتطوير وتراخيص وبلدية أبوظبي والدفاع المدني، مما يضمن راحة البال التنظيمية التامة والالتزام الصارم بالجداول الزمنية."
+        },
+        {
+          q: "ما هي المواد وأنواع الأخشاب المستخدمة في مصنعكم بدبي الذي تبلغ مساحته 15,000 قدم مربع؟",
+          a: "نحن نستورد ونستخدم حصريًا مواد عالية الجودة ومستدامة مصممة للبيئات الفاخرة. يشمل ذلك الأخشاب الصلبة الممتازة والقشور المخصصة المتطابقة بدقة والأخشاب الهندسية المرنة من موردين عالميين موثوقين. تم تجهيز منشأة التصنيع المتطورة لدينا في مجمع دبي للاستثمار بآلات متقدمة للتعامل مع الألواح الصوتية المعقدة وأعمال النجارة المخصصة للضيافة، مما يضمن الدقة والمتانة والتشطيب الممتاز."
+        },
+        {
+          q: "هل الستائر الآلية متوافقة مع أنظمة أتمتة المنازل الذكية؟",
+          a: "نعم، تم تصميم ستائر Somfy الآلية المخصصة لدينا لتندمج بسلاسة مع جميع أنظمة أتمتة المنازل الذكية الرئيسية، بما في ذلك Lutron و Crestron و KNX. يتيح لك هذا التكامل الذكي التحكم بسهولة في الإضاءة الطبيعية والخصوصية والأجواء في جميع أنحاء عقارك باستخدام تطبيقات الهواتف الذكية البديهية أو لوحات الحائط المخصصة أو الأوامر الصوتية المريحة، مما يرتقي بالراحة والتطور الحديث لمساحتك."
+        },
+        {
+          q: "ما هو الجدول الزمني النموذجي لتنفيذ فيلا تسليم مفتاح في دبي؟",
+          a: "يتراوح الجدول الزمني النموذجي للتنفيذ الشامل لفيلا فاخرة في دبي عمومًا من ثلاثة إلى ستة أشهر. ومع ذلك، يعتمد هذا الجدول الزمني بشكل كبير على النطاق العام والحجم المكاني ومتطلبات التخصيص المعقدة والمحددة لمشروعك الفريد. خلال مرحلة التخطيط الأولية، نقدم جدولًا زمنيًا مفصلًا وشفافًا يحدد كل مرحلة حرجة من المفهوم إلى التسليم النهائي."
+        },
+        {
+          q: "هل مسح الموقع الأولي واستشارة التخطيط ثلاثي الأبعاد مجانية؟",
+          a: "نعم، نحن نفخر بتقديم مسح أولي مجاني للموقع واستشارة شخصية شاملة لفهم متطلباتك المكانية الفريدة بعمق. سيناقش خبراء التصميم ذوو الخبرة لدينا رؤيتك بدقة، ويقيمون ظروف الموقع، ويقدمون نظرة عامة مفاهيمية أولية. بمجرد التوافق على الاتجاه الأولي، ننتقل بعد ذلك إلى تطوير حزم عروض CAD ثلاثية الأبعاد المفصلة والواقعية للغاية."
+        }
       ]
     },
     contactSection: {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
 import { Header, Footer, Reveal } from "./components/Shared";
 
@@ -106,8 +106,45 @@ export default function OurServices() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="shell faq-section section">
+          <Reveal className="faq-header" delay={100}>
+            <h2>{dict.faqSection?.title || "Frequently Asked Questions"}</h2>
+          </Reveal>
+          
+          <div className="faq-list">
+            {(dict.faqSection?.items || []).map((faq, index) => (
+              <FaqItem key={index} index={index} faq={faq} />
+            ))}
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
+  );
+}
+
+function FaqItem({ index, faq }) {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <Reveal className={`faq-item ${isOpen ? 'is-open' : ''}`} delay={100 + (index * 50)}>
+      <button className="faq-question" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
+        <div className="faq-question-text">
+          <span className="faq-num">{(index + 1).toString().padStart(2, '0')}.</span>
+          <h3>{faq.q}</h3>
+        </div>
+        <div className={`faq-icon-wrapper ${isOpen ? 'icon-open' : ''}`}>
+          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </div>
+      </button>
+      
+      <div className="faq-answer-wrapper" style={{ maxHeight: isOpen ? '500px' : '0', overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
+        <div className="faq-answer">
+          <p>{faq.a}</p>
+        </div>
+      </div>
+    </Reveal>
   );
 }
