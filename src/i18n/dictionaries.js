@@ -65,14 +65,32 @@ export const dictionaries = {
       ]
     },
     capabilitiesSection: {
-      micro: "The advantage is in the detail",
-      title: "Complexity,\nquietly managed.",
+      micro: "Expertise",
+      title: "Built to Execute",
       items: [
-        ["Photorealistic 3D CAD", "Decisions made clearly, before construction."],
-        ["DM & NOC approvals", "Authority submissions handled without loose ends."],
-        ["Somfy automation", "Motorized curtains integrated, concealed and commissioned."],
-        ["Custom joinery", "One-off pieces crafted and finished under our roof."]
+        ["Architectural Joinery", "From complex acoustic panelling to bespoke hospitality millwork, our DIP-2 facility delivers flawless precision at scale."],
+        ["Turnkey Fit-out", "End-to-end delivery of luxury interiors. We manage the MEP, civil works, and finishes so you can focus on your business."],
+        ["FF&E Procurement", "Global sourcing networks that bring you exclusive materials and furnishings without the typical supply chain delays."]
       ]
+    },
+    estimatorSection: {
+      kicker: "Instant Cost Estimator",
+      title: "Turnkey Investment Estimator Engine",
+      subtitle: "Select your property size and scope to calculate your estimated turnkey fit-out investment in your chosen currency.",
+      propertySize: "Property Size (Square Feet)",
+      scope: "Scope Selection",
+      scopeOptions: ["Full Turnkey", "Factory Joinery", "Somfy Curtains"],
+      location: "Emirate Location",
+      locationOptions: ["Dubai (DM & DDA)", "Abu Dhabi (ADM & DCD)"],
+      estimatedInvestment: "ESTIMATED INVESTMENT",
+      calculatedValue: "Calculated Contract Value",
+      inclusions: [
+        "3D Architectural CAD Package",
+        "100% Municipality NOC",
+        "15k sqft DIP 2 Joinery Production",
+        "5-Year Workmanship Guarantee"
+      ],
+      bookSurvey: "Book Survey & Formal Quote"
     },
     processSection: {
       micro: "A controlled journey",
