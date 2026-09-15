@@ -449,21 +449,6 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   min-height: 100vh;
 }
 
-.media-title-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.media-page-title {
-  font-size: clamp(32px, 4vw, 56px);
-  line-height: 1.1;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.media-grid-section {
-  padding-bottom: 80px;
-}
 
 .media-grid {
   display: grid;
@@ -605,7 +590,7 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 }
 
 .services-page-title {
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(24px, 3vw, 42px);
   line-height: 1.1;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -741,3 +726,13 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   padding-bottom: 2px;
   align-self: flex-start;
 }
+
+.header-cta {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.our-projects-title { font-size: clamp(24px, 3vw, 42px); line-height: 1.1; font-weight: 500; letter-spacing: -0.02em; }
