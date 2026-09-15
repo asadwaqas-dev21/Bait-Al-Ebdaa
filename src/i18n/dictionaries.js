@@ -54,14 +54,13 @@ export const dictionaries = {
       ]
     },
     projectsSection: {
-      micro: "Selected work",
-      title: "Spaces with\na point of view.",
-      tools: "Private residences and workplaces designed for the way our clients actually live and work.",
+      micro: "Our Projects",
+      title: "Transforming Spaces",
+      viewAll: "View All Projects",
       items: [
-        { title: "Canal House", place: "Dubai Water Canal", type: "Private residence", category: "residential" },
-        { title: "The Foundry Office", place: "DIFC, Dubai", type: "Workplace", category: "commercial" },
-        { title: "Courtyard Villa", place: "Saadiyat, Abu Dhabi", type: "Private residence", category: "residential" },
-        { title: "Atelier Suite", place: "Downtown Dubai", type: "Design concept", category: "hospitality" }
+        { title: "Confidential Government Authority Headquarters", place: "Dubai" },
+        { title: "Red Sea Global Residences Experience Center", place: "KSA" },
+        { title: "Saikindō", place: "" }
       ]
     },
     capabilitiesSection: {
@@ -361,14 +360,13 @@ export const dictionaries = {
       ]
     },
     projectsSection: {
-      micro: "أعمال مختارة",
-      title: "مساحات مع\nوجهة نظر.",
-      tools: "مساكن خاصة ومساحات عمل مصممة للطريقة التي يعيش ويعمل بها عملاؤنا بالفعل.",
+      micro: "مشاريعنا",
+      title: "تحويل المساحات",
+      viewAll: "عرض جميع المشاريع",
       items: [
-        { title: "منزل القناة", place: "قناة دبي المائية", type: "سكن خاص", category: "residential" },
-        { title: "مكتب المسبك", place: "مركز دبي المالي العالمي، دبي", type: "مساحة عمل", category: "commercial" },
-        { title: "فيلا كورتيارد", place: "السعديات، أبوظبي", type: "سكن خاص", category: "residential" },
-        { title: "جناح أتيليه", place: "وسط مدينة دبي", type: "مفهوم التصميم", category: "hospitality" }
+        { title: "المقر الرئيسي السري لهيئة حكومية", place: "دبي" },
+        { title: "مركز تجربة مساكن البحر الأحمر الدولية", place: "المملكة العربية السعودية" },
+        { title: "سايكيندو", place: "" }
       ]
     },
     capabilitiesSection: {
