@@ -6,8 +6,9 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Calendar, Check, Wrench } from "lu
 import { useI18n } from "./i18n/I18nProvider";
 import { Header, Footer, Reveal } from "./components/Shared";
 import { Estimator } from "./components/Estimator";
+import { QuoteModal } from "./components/QuoteModal";
 
-function Hero() {
+function Hero({ onGetQuote }) {
   const { dict } = useI18n();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -19,7 +20,7 @@ function Hero() {
   const slide = slides[active]; const select = (i) => setActive((i + slides.length) % slides.length);
   return <section className="hero" id="top" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
     <div className="hero__media" aria-live="polite">{slides.map((item, i) => <Image key={i} className={i === active ? "is-active" : ""} src={heroImages[i]} alt="Luxury residential and commercial interiors in Dubai" fill sizes="100vw" priority={i === 0} />)}<div className="hero__shade" /></div>
-    <div className="hero__content shell"><p className="hero__eyebrow" key={`e-${active}`}>{slide.eyebrow}</p><h1 key={`t-${active}`}>{slide.title}</h1><div style={{display: 'flex', gap: '16px', flexWrap: 'wrap'}}><a className="outline-button outline-button--light" href="https://wa.me/971524621919" target="_blank" rel="noopener noreferrer">WhatsApp Now <ArrowUpRight size={16} /></a><a className="outline-button outline-button--light" href="#contact">Get Free Quote <ArrowUpRight size={16} /></a></div></div>
+    <div className="hero__content shell"><p className="hero__eyebrow" key={`e-${active}`}>{slide.eyebrow}</p><h1 key={`t-${active}`}>{slide.title}</h1><div style={{display: 'flex', gap: '16px', flexWrap: 'wrap'}}><a className="outline-button outline-button--light" href="https://wa.me/971524621919" target="_blank" rel="noopener noreferrer">WhatsApp Now <ArrowUpRight size={16} /></a><button type="button" className="outline-button outline-button--light" onClick={onGetQuote}>Get Free Quote <ArrowUpRight size={16} /></button></div></div>
     <div className="hero__controls shell"><div className="hero__progress" aria-label={`Slide ${active + 1} of ${slides.length}`}><span>0{active + 1}</span><div>{slides.map((_, i) => <button key={i} aria-label={`Go to slide ${i + 1}`} className={i === active ? "is-active" : ""} onClick={() => select(i)} />)}</div><span>0{slides.length}</span></div><div className="hero__summary"><div className="arrow-pair"><button aria-label="Previous hero slide" onClick={() => select(active - 1)}><ArrowLeft /></button><button aria-label="Next hero slide" onClick={() => select(active + 1)}><ArrowRight /></button></div><p key={`b-${active}`}>{slide.body}</p></div></div>
   </section>;
 }
@@ -222,12 +223,14 @@ function Contact() {
   </Reveal></div></section>;
 }
 
-export default function App() { 
-  const [menuOpen, setMenuOpen] = useState(false); 
+export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
   return <>
     <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-    <main><Hero /><Services /><Studio /><Factory /><Sectors /><Projects /><Capabilities /><Process /><Comparison /><Estimator />
+    <main><Hero onGetQuote={() => setQuoteOpen(true)} /><Services /><Studio /><Factory /><Sectors /><Projects /><Capabilities /><Process /><Comparison /><Estimator />
         <Contact /></main>
     <Footer />
-  </>; 
+    <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
+  </>;
 }

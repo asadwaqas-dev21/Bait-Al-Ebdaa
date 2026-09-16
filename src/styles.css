@@ -1731,3 +1731,205 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 [dir="rtl"] .factory-image-caption {
   flex-direction: row-reverse;
 }
+
+/* ==========================================================================
+   Get Free Quote modal (reuses .menu-overlay-style transitions, the
+   estimator slider, and the site's bordered-card visual language)
+   ========================================================================== */
+.quote-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(17, 17, 15, 0.55);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.quote-modal-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.quote-modal-panel {
+  width: min(480px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  transform: translateY(16px);
+  transition: transform 0.3s;
+}
+
+.quote-modal-overlay.is-open .quote-modal-panel {
+  transform: none;
+}
+
+.quote-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-modal-header h2 {
+  font-size: 1.5rem;
+  margin: 0 0 6px;
+}
+
+.quote-modal-subtitle {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.quote-modal-close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.quote-modal-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+.quote-modal-rating-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quote-modal-rating-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.quote-modal-rating-value {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.quote-modal-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--sand);
+}
+
+.quote-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.quote-modal-field input,
+.quote-modal-field select,
+.quote-modal-field textarea {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 13px 14px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.quote-modal-field input:focus,
+.quote-modal-field select:focus,
+.quote-modal-field textarea:focus {
+  border-color: var(--ink);
+}
+
+.quote-modal-field textarea {
+  resize: vertical;
+}
+
+.quote-modal-char-count {
+  align-self: flex-end;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.quote-modal-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.quote-modal-service-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.quote-modal-service-card input {
+  accent-color: var(--ink);
+}
+
+.quote-modal-service-card.is-active {
+  border-color: var(--ink);
+  background: #fbfaf7;
+  font-weight: 600;
+}
+
+.quote-modal-submit {
+  width: 100%;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.quote-modal-whatsapp {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .quote-modal-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+[dir="rtl"] .quote-modal-rating,
+[dir="rtl"] .quote-modal-header {
+  text-align: right;
+}
