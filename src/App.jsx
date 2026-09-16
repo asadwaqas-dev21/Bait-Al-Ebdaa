@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Calendar, Check, Wrench } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
 import { Header, Footer, Reveal } from "./components/Shared";
 import { Estimator } from "./components/Estimator";
@@ -35,6 +35,34 @@ function Studio() {
   return <section className="studio" id="studio"><div className="shell studio__heading"><Reveal><p className="micro micro--light">{dict.studioSection.micro}</p><h2 className="section-title" style={{whiteSpace: 'pre-wrap'}}>{dict.studioSection.title}</h2></Reveal><Reveal className="studio__intro" delay={120}><p>{dict.studioSection.intro}</p><a href={`/${lang}/process`}>{dict.studioSection.seeHow} <ArrowUpRight size={16} /></a></Reveal></div><Reveal className="studio__image"><Image src="/assets/joinery-factory.png" alt="Custom joinery manufacturing facility" fill sizes="100vw" /></Reveal><div className="shell studio__facts">{dict.studioSection.facts.map((f, i) => <Reveal key={i} delay={i * 100}><strong>{f.strong}</strong><span>{f.span}</span></Reveal>)}</div></section>;
 }
 
+function Factory() {
+  const { dict } = useI18n();
+  const f = dict.factorySection;
+  return <section className="section section--light" id="factory">
+    <div className="shell factory-grid">
+      <Reveal className="factory-copy">
+        <p className="micro">{f.badge}</p>
+        <h2 className="section-title">{f.title}</h2>
+        <p className="factory-desc">{f.description}</p>
+        <div className="factory-feature-grid">
+          {f.features.map((item, i) => <div className="factory-feature-card" key={i}>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </div>)}
+        </div>
+        <a href="#contact" className="outline-button outline-button--dark factory-cta"><Calendar size={16} /> {f.cta}</a>
+      </Reveal>
+      <Reveal className="factory-image-wrap" delay={120}>
+        <Image src="/assets/joinery-factory.png" alt={f.title} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+        <div className="factory-image-caption">
+          <span>{f.captionLocation}</span>
+          <span className="factory-live-badge"><Wrench size={12} /> {f.captionBadge}</span>
+        </div>
+      </Reveal>
+    </div>
+  </section>;
+}
+
 function Sectors() {
   const { dict } = useI18n();
   const [active, setActive] = useState(0);
@@ -58,11 +86,40 @@ function Process() {
   return <section className="section process" id="process"><div className="shell"><Reveal className="process__heading"><p className="micro">{dict.processSection.micro}</p><h2 className="section-title" style={{whiteSpace: 'pre-wrap'}}>{dict.processSection.title}</h2></Reveal><div className="process-grid">{dict.processSection.items.map(([title, body], i) => <Reveal className="process-step" key={i} delay={i * 80}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></Reveal>)}</div></div></section>;
 }
 
+function Comparison() {
+  const { dict } = useI18n();
+  const c = dict.comparisonSection;
+  return <section className="section section--light" id="comparison"><div className="shell">
+    <Reveal className="section-heading section-heading--center">
+      <p className="micro">{c.micro}</p>
+      <h2 className="section-title" style={{ whiteSpace: 'pre-wrap' }}>{c.title}</h2>
+    </Reveal>
+    <Reveal className="comparison-table-wrap" delay={100}>
+      <table className="comparison-table">
+        <thead>
+          <tr>
+            <th>{c.featureLabel}</th>
+            <th>{c.standardLabel}</th>
+            <th className="comparison-vip-col">{c.vipLabel}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {c.rows.map((row, i) => <tr key={i}>
+            <td className="comparison-feature">{row[0]}</td>
+            <td className="comparison-standard">{row[1]}</td>
+            <td className="comparison-vip-col comparison-vip">{row[2]}</td>
+          </tr>)}
+        </tbody>
+      </table>
+    </Reveal>
+  </div></section>;
+}
+
 
 function Contact() {
   const { dict } = useI18n();
   const t = dict.contactSection;
-  const [sent, setSent] = useState(false); const [type, setType] = useState(t.types[1]); // Default Procurement Form
+  const [sent, setSent] = useState(false); const [type, setType] = useState(t.types[0]); // Default Project Form
   
   // Track selected type index to conditionally map
   const typeIndex = t.types.indexOf(type) !== -1 ? t.types.indexOf(type) : 1;
@@ -169,7 +226,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false); 
   return <>
     <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-    <main><Hero /><Services /><Studio /><Sectors /><Projects /><Capabilities /><Process /><Estimator />
+    <main><Hero /><Services /><Studio /><Factory /><Sectors /><Projects /><Capabilities /><Process /><Comparison /><Estimator />
         <Contact /></main>
     <Footer />
   </>; 

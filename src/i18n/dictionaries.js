@@ -43,6 +43,18 @@ export const dictionaries = {
         { strong: "UAE", span: "Dubai & Abu Dhabi delivery" }
       ]
     },
+    factorySection: {
+      badge: "15,000 sq ft Manufacturing Facility",
+      title: "Our In-House Dubai Joinery Factory",
+      description: "Unlike contractors who outsource wood fabrication, Bait Al Ebdaa owns and operates a state-of-the-art 15,000 sq ft manufacturing facility in Dubai with 50+ master carpenters.",
+      features: [
+        { title: "German CNC Machinery", desc: "Sub-millimeter cutting accuracy" },
+        { title: "European Walnut & Oak", desc: "Direct timber import from Italy" }
+      ],
+      cta: "Schedule Guided Factory Visit",
+      captionLocation: "Dubai Investment Park // Facility #4",
+      captionBadge: "Live Production"
+    },
     sectorsSection: {
       micro: "Spaces we shape",
       title: "Designed around\nhow life unfolds.",
@@ -72,6 +84,20 @@ export const dictionaries = {
         ["Architectural Joinery", "From complex acoustic panelling to bespoke hospitality millwork, our DIP-2 facility delivers flawless precision at scale."],
         ["Turnkey Fit-out", "End-to-end delivery of luxury interiors. We manage the MEP, civil works, and finishes so you can focus on your business."],
         ["FF&E Procurement", "Global sourcing networks that bring you exclusive materials and furnishings without the typical supply chain delays."]
+      ]
+    },
+    comparisonSection: {
+      micro: "Transparent Package Comparison",
+      title: "Scope Packages & Features Matrix",
+      featureLabel: "Fit-out Service Feature",
+      standardLabel: "Standard Fit-out",
+      vipLabel: "Bait Al Ebdaa VIP Turnkey",
+      rows: [
+        ["Photorealistic 3D Architectural Renders", "Basic 2D Floorplan", "99.4% Accuracy 3D Renders"],
+        ["Dubai Municipality (DM NOC) Submissions", "Client Handled", "100% Managed by Bait Al Ebdaa"],
+        ["15,000 sq ft Joinery Manufacturing", "Outsourced Subcontractors", "In-House DIP 2 German CNC Production"],
+        ["Somfy Motorized Drapery Integration", "Manual Tracks Only", "Somfy Glydea Ultra Smart Motorization"],
+        ["Workmanship Warranty Package", "1 Year Basic", "5-Year Complete Warranty"]
       ]
     },
     estimatorSection: {
@@ -174,9 +200,9 @@ export const dictionaries = {
       explore: "Explore",
       exploreLinks: ["Home", "About Us", "Projects", "Services", "Contact"],
       importantLinks: "Important Links",
-      importantLinksItems: ["Sustainability & HSE", "Contact & Locations", "Client Testimonials"],
+      importantLinksItems: ["DED License #121113", "Dubai Municipality (DM) NOC", "Trakhees Approval NOC"],
       contactInfo: "Contact Info",
-      loc: "Dubai, UAE:",
+      loc: "Jurf Industrial 2, Ajman, UAE:",
       backToTop: "Back to the top",
       privacy: "Privacy Policy",
       copy: "Copyright © 2026 Bait Al Ebdaa. All Rights Reserved."
@@ -360,6 +386,18 @@ export const dictionaries = {
         { strong: "الإمارات", span: "تسليم في دبي وأبوظبي" }
       ]
     },
+    factorySection: {
+      badge: "منشأة تصنيع بمساحة 15,000 قدم مربع",
+      title: "مصنع النجارة الخاص بنا في دبي",
+      description: "على عكس المقاولين الذين يوكلون تصنيع الأخشاب لجهات خارجية، تمتلك بيت الإبداع وتدير منشأة تصنيع متطورة بمساحة 15,000 قدم مربع في دبي مع أكثر من 50 نجاراً محترفاً.",
+      features: [
+        { title: "آلات CNC ألمانية", desc: "دقة قطع دون المليمتر" },
+        { title: "جوز وبلوط أوروبي", desc: "استيراد مباشر للأخشاب من إيطاليا" }
+      ],
+      cta: "احجز جولة موجهة في المصنع",
+      captionLocation: "مجمع دبي للاستثمار // المنشأة رقم 4",
+      captionBadge: "إنتاج مباشر"
+    },
     sectorsSection: {
       micro: "مساحات نشكلها",
       title: "مصممة حول\nكيف تتكشف الحياة.",
@@ -400,6 +438,20 @@ export const dictionaries = {
         ["تصور", "خطط، مواد وتصاميم CAD ثلاثية الأبعاد واقعية."],
         ["اعتمد", "حزم تقنية، تنسيق مع بلدية دبي وشهادات عدم الممانعة."],
         ["اصنع", "إنتاج النجارة، التجهيز، التركيب وتسليم مدروس."]
+      ]
+    },
+    comparisonSection: {
+      micro: "مقارنة شفافة للباقات",
+      title: "مصفوفة باقات النطاق والمزايا",
+      featureLabel: "ميزة خدمة التجهيز",
+      standardLabel: "تجهيز قياسي",
+      vipLabel: "بيت الإبداع VIP تسليم مفتاح",
+      rows: [
+        ["تصاميم معمارية ثلاثية الأبعاد واقعية", "مخطط أرضي ثنائي الأبعاد أساسي", "تصاميم ثلاثية الأبعاد بدقة 99.4%"],
+        ["تقديمات شهادة عدم ممانعة بلدية دبي", "يتولاها العميل", "تدار بالكامل من قبل بيت الإبداع"],
+        ["تصنيع نجارة بمساحة 15,000 قدم مربع", "مقاولون من الباطن خارجيون", "إنتاج داخلي بتقنية CNC ألمانية DIP 2"],
+        ["دمج ستائر سومفي الآلية", "مسارات يدوية فقط", "تحريك سومفي Glydea Ultra الذكي"],
+        ["حزمة ضمان جودة التصنيع", "سنة واحدة أساسية", "ضمان شامل لمدة 5 سنوات"]
       ]
     },
     estimatorSection: {
@@ -492,9 +544,9 @@ export const dictionaries = {
       explore: "استكشف",
       exploreLinks: ["الرئيسية", "من نحن", "المشاريع", "الخدمات", "اتصل بنا"],
       importantLinks: "روابط مهمة",
-      importantLinksItems: ["الاستدامة والصحة والسلامة", "الاتصال والمواقع", "شهادات العملاء"],
+      importantLinksItems: ["رخصة دائرة التنمية الاقتصادية رقم 121113", "شهادة عدم ممانعة بلدية دبي", "شهادة عدم ممانعة تراخيص"],
       contactInfo: "معلومات الاتصال",
-      loc: "دبي، الإمارات:",
+      loc: "الجرف الصناعية 2، عجمان، الإمارات:",
       backToTop: "العودة للأعلى",
       privacy: "سياسة الخصوصية",
       copy: "حقوق الطبع والنشر © 2026 بيت الإبداع. جميع الحقوق محفوظة."
