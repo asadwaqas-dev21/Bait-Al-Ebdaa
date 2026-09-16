@@ -763,10 +763,14 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   text-transform: uppercase;
 }
 
+/* Matches .section-title / .offerings-title — the site's one section-heading scale,
+   used consistently for every section h2 (Services, Studio, Sectors, Offerings, FAQ, etc). */
 .faq-header h2 {
   margin-bottom: 24px;
-  font-size: clamp(2.7rem, 4.7vw, 5.4rem);
-  line-height: 0.98;
+  font-size: clamp(32px, 4.5vw, 50px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .faq-subtitle {
@@ -914,7 +918,6 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 
   .faq-header h2 {
     margin-bottom: 18px;
-    font-size: clamp(2.4rem, 12vw, 3.5rem);
   }
 
   .faq-subtitle {
@@ -1241,4 +1244,280 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
     gap: 16px;
     padding: 110px 0 24px 0 !important;
   }
+}
+
+/* ==========================================================================
+   Explore by service grid (Our Services hub -> SEO service+location pages)
+   ========================================================================== */
+.explore-services-section {
+  padding-top: 40px;
+}
+
+.explore-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.explore-service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.explore-service-card:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+@media (max-width: 980px) {
+  .explore-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .explore-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Service + Location SEO template (src/ServiceLocationPage.jsx)
+   ========================================================================== */
+.slp-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 46vh;
+  min-height: 340px;
+  max-height: 560px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f3efe9;
+}
+
+@media (max-width: 700px) {
+  .slp-hero-wrapper {
+    height: 56vw;
+    min-height: 240px;
+  }
+}
+
+.slp-intro-section {
+  padding: 60px 0 20px;
+}
+
+.slp-intro-text {
+  max-width: 780px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 50px;
+}
+
+.proof-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.proof-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proof-stat strong {
+  font: 400 clamp(2rem, 3.4vw, 3rem) / 1 "Manrope", var(--font-manrope), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.proof-stat span {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.slp-included-section {
+  padding: 20px 0 60px;
+}
+
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.included-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 0.92rem;
+}
+
+.included-check {
+  flex: none;
+  color: var(--ink);
+}
+
+.slp-gallery-section {
+  padding: 0 0 60px;
+}
+
+.slp-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.slp-gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ddd7cc;
+}
+
+@media (max-width: 700px) {
+  .slp-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slp-process-section {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.slp-section-label {
+  margin: 0 auto;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.estimator-section--compact {
+  padding: 40px 0 clamp(80px, 9vw, 140px);
+}
+
+.slp-proof-section {
+  padding: 40px 0;
+}
+
+.slp-proof-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 18px;
+}
+
+.slp-proof-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slp-proof-copy h3 {
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  margin: 6px 0 18px;
+}
+
+.slp-cta-section {
+  padding: 40px 0 80px;
+}
+
+.slp-cta-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 44px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: #fff;
+}
+
+.slp-cta-card h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  max-width: 620px;
+}
+
+.slp-links-section {
+  padding: 20px 0 clamp(90px, 10vw, 160px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.slp-links-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.slp-links-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slp-links-pills a {
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.slp-links-pills a:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .proof-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+  .slp-proof-card {
+    grid-template-columns: 1fr;
+  }
+  .slp-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+[dir="rtl"] .proof-stats-grid,
+[dir="rtl"] .included-item,
+[dir="rtl"] .slp-cta-card {
+  text-align: right;
 }

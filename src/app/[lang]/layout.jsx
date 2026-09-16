@@ -29,25 +29,25 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export const metadata = {
-  metadataBase: new URL('https://al-ebdaa.vercel.app'),
+  metadataBase: new URL('https://baitalebdaa.ae'),
   title: {
-    default: "Biat Al Ebdaa | Turnkey Interior Design Dubai",
-    template: "%s | Biat Al Ebdaa",
+    default: "Bait Al Ebdaa | Turnkey Interior Design Dubai",
+    template: "%s | Bait Al Ebdaa",
   },
   description:
-    "Biat Al Ebdaa creates refined villa and office interiors across Dubai and Abu Dhabi, with in-house joinery, photorealistic 3D visualization, approvals and luxury fit-out.",
-  keywords: ["Turnkey Interior Design", "Custom Architectural Joinery", "Luxury Fit-out Dubai", "Abu Dhabi Interiors", "Interior Design UAE", "Biat Al Ebdaa"],
+    "Bait Al Ebdaa creates refined villa and office interiors across Dubai and Abu Dhabi, with in-house joinery, photorealistic 3D visualization, approvals and luxury fit-out.",
+  keywords: ["Turnkey Interior Design", "Custom Architectural Joinery", "Luxury Fit-out Dubai", "Abu Dhabi Interiors", "Interior Design UAE", "Bait Al Ebdaa"],
   openGraph: {
-    title: "Biat Al Ebdaa | Turnkey Interior Design Dubai",
+    title: "Bait Al Ebdaa | Turnkey Interior Design Dubai",
     description: "Refined villa and office interiors across Dubai and Abu Dhabi.",
-    url: 'https://al-ebdaa.vercel.app',
-    siteName: 'Biat Al Ebdaa',
+    url: 'https://baitalebdaa.ae',
+    siteName: 'Bait Al Ebdaa',
     locale: 'en_AE',
     type: "website",
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Biat Al Ebdaa | Turnkey Interior Design Dubai",
+    title: "Bait Al Ebdaa | Turnkey Interior Design Dubai",
     description: "Refined villa and office interiors across Dubai and Abu Dhabi.",
   },
   alternates: {

@@ -5,6 +5,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://al-ebdaa.vercel.app/sitemap.xml',
+    sitemap: 'https://baitalebdaa.ae/sitemap.xml',
   }
 }

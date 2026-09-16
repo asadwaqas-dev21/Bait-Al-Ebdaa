@@ -177,7 +177,7 @@ export const dictionaries = {
       loc: "Dubai, UAE:",
       backToTop: "Back to the top",
       privacy: "Privacy Policy",
-      copy: "Copyright © 2026 Biat Al Ebdaa. All Rights Reserved."
+      copy: "Copyright © 2026 Bait Al Ebdaa. All Rights Reserved."
     },
     ourProjectsPage: {
       home: "Home",
@@ -251,19 +251,22 @@ export const dictionaries = {
       comprehensiveOfferings: "Comprehensive Service Offerings",
       offeringsSubtitle: "We provide customized interior solutions tailored every project need.",
       learnMore: "Learn More ↗",
+      exploreByServiceKicker: "Browse by service",
+      exploreByServiceTitle: "Every Service, Across the UAE",
+      exploreByServiceSubtitle: "Jump straight to the service you need — each page covers scope, process, cost context and FAQs for your emirate.",
       services: [
         {
           num: "01",
           title: "Interior Fit Out",
           description: "We work closely with your architect, designer, or project manager to deliver top-quality interior fit-out services, including MEP, furniture, and finishes.",
-          image: "/assets/hero-penthouse.png",
+          image: "/assets/tv-unit-1.jpeg",
           link: "#"
         },
         {
           num: "02",
           title: "Design and Build",
           description: "We provide complete design and interior fit-out services in full turnkey solutions helping to reduce project risks and costs, and can lead to faster completion.",
-          image: "/assets/project-office.png",
+          image: "/assets/dressing-unit-1.jpeg",
           link: "#"
         }
       ]
@@ -294,14 +297,14 @@ export const dictionaries = {
           num: "03",
           title: "Execution & Build",
           description: "Our dedicated project managers oversee the entire fit-out process, coordinating with trusted contractors and ensuring the highest quality standards are met.",
-          image: "/assets/project-villa.png",
+          image: "/assets/cabinet-joinery.jpeg",
           link: "#"
         },
         {
           num: "04",
           title: "Handover & Support",
           description: "Upon completion, we conduct a rigorous snagging process and hand over the keys. Our relationship continues with dedicated post-occupancy support.",
-          image: "/assets/cad-render.png",
+          image: "/assets/dining-table.jpeg",
           link: "#"
         }
       ]
@@ -560,19 +563,22 @@ export const dictionaries = {
       comprehensiveOfferings: "عروض الخدمات الشاملة",
       offeringsSubtitle: "نحن نقدم حلولًا داخلية مخصصة ومصممة لتلبية احتياجات كل مشروع.",
       learnMore: "اعرف المزيد ↗",
+      exploreByServiceKicker: "تصفح حسب الخدمة",
+      exploreByServiceTitle: "كل خدمة، في جميع أنحاء الإمارات",
+      exploreByServiceSubtitle: "انتقل مباشرة إلى الخدمة التي تحتاجها — تغطي كل صفحة النطاق والعملية والتكلفة التقديرية والأسئلة الشائعة لإمارتك.",
       services: [
         {
           num: "01",
           title: "التجهيزات الداخلية",
           description: "نعمل عن كثب مع المهندس المعماري أو المصمم أو مدير المشروع لتقديم خدمات تجهيزات داخلية عالية الجودة، بما في ذلك الأعمال الميكانيكية والكهربائية والسباكة والأثاث والتشطيبات.",
-          image: "/assets/hero-penthouse.png",
+          image: "/assets/tv-unit-1.jpeg",
           link: "#"
         },
         {
           num: "02",
           title: "التصميم والبناء",
           description: "نحن نقدم خدمات تصميم وتجهيزات داخلية كاملة في حلول جاهزة بالكامل تساعد في تقليل مخاطر المشروع وتكاليفه، ويمكن أن تؤدي إلى إنجاز أسرع.",
-          image: "/assets/project-office.png",
+          image: "/assets/dressing-unit-1.jpeg",
           link: "#"
         }
       ]
@@ -603,14 +609,14 @@ export const dictionaries = {
           num: "03",
           title: "التنفيذ والبناء",
           description: "يشرف مديرو المشاريع المخصصون لدينا على عملية التجهيز بأكملها، وينسقون مع المقاولين الموثوق بهم ويضمنون تلبية أعلى معايير الجودة.",
-          image: "/assets/project-villa.png",
+          image: "/assets/cabinet-joinery.jpeg",
           link: "#"
         },
         {
           num: "04",
           title: "التسليم والدعم",
           description: "عند الانتهاء، نجري عملية فحص صارمة ونسلم المفاتيح. تستمر علاقتنا بدعم مخصص بعد الإشغال.",
-          image: "/assets/cad-render.png",
+          image: "/assets/dining-table.jpeg",
           link: "#"
         }
       ]

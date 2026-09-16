@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "./i18n/I18nProvider";
-import { Header, Footer, Reveal, PageHeader } from "./components/Shared";
+import { Header, Footer, Reveal, PageHeader, FaqItem } from "./components/Shared";
+import { services as seoServices } from "./lib/seo-pages";
 
 export default function OurServices() {
   const { lang, dict } = useI18n();
@@ -95,6 +96,29 @@ export default function OurServices() {
           </div>
         </section>
 
+        {/* Explore by Service (links into the SEO service+location pages) */}
+        <section className="shell services-offerings-section explore-services-section">
+          <Reveal delay={100}>
+            <div className="offerings-header-wrapper">
+              <div className="offerings-kicker">
+                <span>{t.exploreByServiceKicker}</span>
+                <div className="kicker-underline"></div>
+              </div>
+              <h2 className="offerings-title">{t.exploreByServiceTitle}</h2>
+              <p className="offerings-subtitle">{t.exploreByServiceSubtitle}</p>
+            </div>
+          </Reveal>
+
+          <div className="explore-services-grid">
+            {seoServices.map((service, i) => (
+              <Reveal as="a" key={service.slug} href={`/${lang}/${service.slug}/uae/`} className="explore-service-card" delay={60 + (i % 4) * 40}>
+                <span>{lang === "ar" ? service.ar : service.en}</span>
+                <ArrowUpRight size={16} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="faq-section" aria-labelledby="services-faq-title">
           <div className="shell faq-shell">
@@ -118,36 +142,5 @@ export default function OurServices() {
       </main>
       <Footer />
     </>
-  );
-}
-
-function FaqItem({ index, faq }) {
-  const [isOpen, setIsOpen] = useState(index === 0);
-  const answerId = `services-faq-answer-${index}`;
-  
-  return (
-    <Reveal className={`faq-item ${isOpen ? 'is-open' : ''}`} delay={100 + (index * 50)}>
-      <button
-        type="button"
-        className="faq-question"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-        aria-controls={answerId}
-      >
-        <div className="faq-question-text">
-          <span className="faq-num" aria-hidden="true">{index + 1}</span>
-          <h3>{faq.q}</h3>
-        </div>
-        <span className="faq-icon-wrapper" aria-hidden="true">
-          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </span>
-      </button>
-
-      <div id={answerId} className="faq-answer-wrapper" aria-hidden={!isOpen}>
-        <div className="faq-answer">
-          <p>{faq.a}</p>
-        </div>
-      </div>
-    </Reveal>
   );
 }

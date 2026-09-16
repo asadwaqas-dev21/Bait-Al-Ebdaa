@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUp, ArrowUpRight, Menu, X, Globe } from "lucide-react";
+import { ArrowUp, ArrowUpRight, ChevronDown, ChevronUp, Menu, X, Globe } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
 import { useRouter } from "next/navigation";
 
 export function Brand({ light = false, priority = false, customSrc = null }) {
-  return <a className={`brand ${light ? "brand--light" : ""}`} href="/" aria-label="Biat Al Ebdaa home"><Image className="brand__logo" src={customSrc || "/assets/logo.png"} alt="Biat Al Ebdaa - Luxury Interior Design and Joinery Logo" width={2170} height={725} priority={priority} /></a>;
+  return <a className={`brand ${light ? "brand--light" : ""}`} href="/" aria-label="Bait Al Ebdaa home"><Image className="brand__logo" src={customSrc || "/assets/logo.png"} alt="Bait Al Ebdaa - Luxury Interior Design and Joinery Logo" width={2170} height={725} priority={priority} /></a>;
 }
 
 export function Reveal({ as: Tag = "div", className = "", children, delay = 0, ...props }) {
@@ -123,7 +123,7 @@ export function Footer() {
       </div>
     </div>
     <div className="shell footer-mid">
-      <Image className="footer-logo" src="/assets/footer logo.png" alt="Biat Al Ebdaa" width={1540} height={400} />
+      <Image className="footer-logo" src="/assets/footer logo.png" alt="Bait Al Ebdaa" width={1540} height={400} />
       <a href="#top" className="footer-back-top" aria-label="Back to top"><ArrowUp size={20} /><span>{f.backToTop}</span></a>
     </div>
     <div className="shell footer-bottom">
@@ -165,5 +165,36 @@ export function PageHeader({ kicker, breadcrumbs, title, children }) {
         {children}
       </section>
     </>
+  );
+}
+
+export function FaqItem({ index, faq, idPrefix = "faq" }) {
+  const [isOpen, setIsOpen] = useState(index === 0);
+  const answerId = `${idPrefix}-answer-${index}`;
+
+  return (
+    <Reveal className={`faq-item ${isOpen ? 'is-open' : ''}`} delay={100 + (index * 50)}>
+      <button
+        type="button"
+        className="faq-question"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls={answerId}
+      >
+        <div className="faq-question-text">
+          <span className="faq-num" aria-hidden="true">{index + 1}</span>
+          <h3>{faq.q}</h3>
+        </div>
+        <span className="faq-icon-wrapper" aria-hidden="true">
+          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </span>
+      </button>
+
+      <div id={answerId} className="faq-answer-wrapper" aria-hidden={!isOpen}>
+        <div className="faq-answer">
+          <p>{faq.a}</p>
+        </div>
+      </div>
+    </Reveal>
   );
 }
