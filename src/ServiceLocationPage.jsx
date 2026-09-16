@@ -7,6 +7,7 @@ import { useI18n } from "./i18n/I18nProvider";
 import { Header, Footer, Reveal, PageHeader, FaqItem } from "./components/Shared";
 import { Estimator } from "./components/Estimator";
 import { serviceContent } from "./data/service-content";
+import { locationContent } from "./data/location-content";
 import { getService, getLocation, getSiblingLocations, getSiblingServices, getEmirateName, getEmirateAuthority } from "./lib/seo-pages";
 
 const HERO_IMAGE_BY_SERVICE = {
@@ -94,16 +95,22 @@ export default function ServiceLocationPage({ lang, row }) {
   const content = serviceContent[row.serviceSlug]?.[lang];
   const isEmirateItself = location.tier === "core";
 
-  // Genuinely location-specific clause (real jurisdiction, not a swapped city name) —
-  // added to the category-level summary so the intro isn't identical across all 30
-  // locations of the same service. See src/lib/seo-pages.js#getEmirateAuthority.
+  // Genuinely location-specific clause (real jurisdiction + real area character, not a
+  // swapped city name) — added to the category-level summary so the intro isn't identical
+  // across all 30 locations of the same service. See src/lib/seo-pages.js#getEmirateAuthority
+  // and src/data/location-content.js for the area-character source.
+  const areaProfile = locationContent[row.locationSlug]?.[lang];
   const locationClause = isEmirateItself
     ? lang === "ar"
       ? `نغطي ${locationName} بالكامل، وننسق أي موافقات مطلوبة مباشرة مع ${authority}.`
       : `We cover all of ${locationName}, coordinating any required approvals directly with ${authority}.`
-    : lang === "ar"
-      ? `في ${locationName} ضمن إمارة ${emirateName}، ننسق أي موافقات مطلوبة مباشرة مع ${authority}.`
-      : `In ${locationName}, part of ${emirateName}, we coordinate any required approvals directly with ${authority}.`;
+    : areaProfile
+      ? lang === "ar"
+        ? `${locationName}، ${areaProfile}، تقع ضمن إمارة ${emirateName}، حيث ننسق أي موافقات مطلوبة مباشرة مع ${authority}.`
+        : `${locationName} is ${areaProfile}, part of ${emirateName} — we coordinate any required approvals directly with ${authority}.`
+      : lang === "ar"
+        ? `في ${locationName} ضمن إمارة ${emirateName}، ننسق أي موافقات مطلوبة مباشرة مع ${authority}.`
+        : `In ${locationName}, part of ${emirateName}, we coordinate any required approvals directly with ${authority}.`;
 
   const otherAreas = getSiblingLocations(lang, row.serviceSlug, row.locationSlug);
   const coreAreas = otherAreas.filter((entry) => entry.location.tier === "core");
@@ -122,7 +129,7 @@ export default function ServiceLocationPage({ lang, row }) {
       ? `مرحباً! أرغب بالاستفسار عن خدمة ${serviceName} في ${locationName}.`
       : `Hello! I'd like to enquire about ${serviceName} in ${locationName}.`
   );
-  const waHref = `https://wa.me/971501234567?text=${waMessage}`;
+  const waHref = `https://wa.me/971524621919?text=${waMessage}`;
 
   const project = dict.projectDetailPage.projects["government-authority"];
 
@@ -133,18 +140,18 @@ export default function ServiceLocationPage({ lang, row }) {
       q: lang === "ar" ? `هل تقدمون خدمة ${serviceName} في ${locationName}؟` : `Do you offer ${serviceName} in ${locationName}?`,
       a: isEmirateItself
         ? lang === "ar"
-          ? `نعم، فريقنا يغطي ${locationName} بالكامل. تواصل معنا عبر واتساب أو اطلب مسحاً أولياً للموقع لبدء مشروعك.`
-          : `Yes — our team covers all of ${locationName}. Reach out on WhatsApp or request a site survey to get started.`
+          ? `نعم، فريقنا يغطي ${locationName} بالكامل، من الاستشارة الأولى وحتى التسليم النهائي. سواء كان مشروعك فيلا خاصة أو مساحة تجارية، ننسق الجدول الزمني والمواد والمعاينات حول موقعك الفعلي بدلاً من افتراض ظروف عامة. تواصل معنا عبر واتساب أو اطلب مسحاً أولياً مجانياً للموقع لمناقشة النطاق والحصول على جدول زمني واقعي لبدء مشروعك.`
+          : `Yes — our team covers all of ${locationName} end to end, from the first consultation through to final handover. Whether your project is a private villa or a commercial space, we plan the schedule, materials and site visits around your actual location rather than assuming generic conditions. Reach out on WhatsApp or request a free site survey to discuss scope and get a realistic programme.`
         : lang === "ar"
-          ? `نعم، فريقنا يخدم ${locationName} ضمن تغطيتنا لإمارة ${emirateName}. تواصل معنا عبر واتساب أو اطلب مسحاً أولياً للموقع لبدء مشروعك.`
-          : `Yes — our team covers ${locationName} as part of our delivery across ${emirateName}. Reach out on WhatsApp or request a site survey to get started.`,
+          ? `نعم، فريقنا يخدم ${locationName} ضمن تغطيتنا الكاملة لإمارة ${emirateName}، بنفس فريق التصميم والتنفيذ ومعايير الجودة المطبقة في باقي مشاريعنا. نُجري المسح الأولي في موقعك مباشرة لنأخذ القياسات الفعلية وظروف الوصول بعين الاعتبار قبل وضع أي جدول زمني. تواصل معنا عبر واتساب أو اطلب مسحاً أولياً مجانياً للموقع لبدء مشروعك.`
+          : `Yes — our team covers ${locationName} as part of our full delivery across ${emirateName}, using the same design, execution and compliance standards as every other project we run. We conduct the initial survey at your actual site so real measurements and access conditions are accounted for before any schedule is agreed. Reach out on WhatsApp or request a free site survey to get started.`,
     },
     {
       q: lang === "ar" ? `من يدير موافقات ${authority} لمشروعي؟` : `Who manages ${authority} approvals for my project?`,
       a:
         lang === "ar"
-          ? `فريق الامتثال الداخلي لدينا يتولى التقديم والمتابعة مع ${authority} نيابة عنك، من التصاريح الأولية حتى شهادة الإنجاز.`
-          : `Our in-house compliance team handles submissions and follow-up with ${authority} on your behalf, from initial permits through to the completion certificate.`,
+          ? `فريق الامتثال الداخلي لدينا يتولى التقديم والمتابعة مع ${authority} نيابة عنك بالكامل، بدءاً من التصاريح الأولية والرسومات الفنية المطلوبة، مروراً بمتابعة حالة الطلب وأي ملاحظات من الجهة، وصولاً إلى شهادة الإنجاز النهائية. هذا يعني أنك لست مضطراً لحضور اجتماعات الجهات بنفسك أو فهم الإجراءات الإدارية المعقدة، فنحن نتحمل هذا الجزء بالكامل ضمن نطاق العقد.`
+          : `Our in-house compliance team handles submissions and follow-up with ${authority} on your behalf in full — from initial permits and the technical drawings they require, through tracking application status and responding to any queries the authority raises, to the final completion certificate. That means you're not required to attend authority meetings yourself or navigate the paperwork alone; it's covered within the project scope.`,
     },
   ];
 
@@ -156,15 +163,15 @@ export default function ServiceLocationPage({ lang, row }) {
         name: row.h1,
         serviceType: serviceName,
         areaServed: locationName,
-        provider: { "@type": "Organization", name: "Bait Al Ebdaa", url: "https://baitalebdaa.ae" },
+        provider: { "@type": "Organization", name: "Bait Al Ebdaa", url: "https://baitalebdaa.com" },
         url: row.canonical,
         description: row.metaDescription,
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: home, item: `https://baitalebdaa.ae/${lang}/` },
-          { "@type": "ListItem", position: 2, name: serviceName, item: `https://baitalebdaa.ae/${lang}/${row.serviceSlug}/uae/` },
+          { "@type": "ListItem", position: 1, name: home, item: `https://baitalebdaa.com/${lang}/` },
+          { "@type": "ListItem", position: 2, name: serviceName, item: `https://baitalebdaa.com/${lang}/${row.serviceSlug}/uae/` },
           { "@type": "ListItem", position: 3, name: locationName, item: row.canonical },
         ],
       },

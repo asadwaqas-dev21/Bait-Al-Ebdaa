@@ -66,9 +66,7 @@ export default function Process() {
                         <span className="service-num">{step.num}</span>
                         <h3 className="service-title">{step.title}</h3>
                         <p className="service-desc">{step.description}</p>
-                        <a href={step.link} className="service-learn-more">
-                          {t.learnMore}
-                        </a>
+                        {step.meta && <p className="service-meta">{step.meta}</p>}
                       </div>
                     </>
                   ) : (
@@ -78,9 +76,7 @@ export default function Process() {
                         <span className="service-num">{step.num}</span>
                         <h3 className="service-title">{step.title}</h3>
                         <p className="service-desc">{step.description}</p>
-                        <a href={step.link} className="service-learn-more">
-                          {t.learnMore}
-                        </a>
+                        {step.meta && <p className="service-meta">{step.meta}</p>}
                       </div>
                       <div className="service-image-container">
                         <Image src={step.image} alt={step.title} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectFit: 'cover' }} />

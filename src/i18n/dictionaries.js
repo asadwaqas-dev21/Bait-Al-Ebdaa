@@ -58,9 +58,11 @@ export const dictionaries = {
       title: "Transforming Spaces",
       viewAll: "View All Projects",
       items: [
-        { title: "Confidential Government Authority Headquarters", place: "Dubai" },
-        { title: "Red Sea Global Residences Experience Center", place: "KSA" },
-        { title: "Saikindō", place: "" }
+        { title: "Dubai Hills Estate Luxury Villa", place: "Dubai Hills Estate", subtitle: "Turnkey Fit-out & European Joinery" },
+        { title: "Palm Jumeirah Beachfront Penthouse", place: "Palm Jumeirah", subtitle: "Somfy Motorized Drapes & Italian Panelling" },
+        { title: "Downtown Dubai Tech HQ Office", place: "Downtown Dubai", subtitle: "Commercial Fit-out & DM Approval" },
+        { title: "Al Barari Eco-Villa Suite", place: "Al Barari", subtitle: "Bespoke Walnut Wardrobes & Soft Furnishings" },
+        { title: "Emirates Hills Mansion Wing", place: "Emirates Hills", subtitle: "Full Turnkey Architecture & Joinery" }
       ]
     },
     capabilitiesSection: {
@@ -281,29 +283,33 @@ export const dictionaries = {
       steps: [
         {
           num: "01",
-          title: "Discovery & Planning",
-          description: "We start by understanding your vision, requirements, and budget. Our team conducts a thorough site analysis and develops a comprehensive project plan.",
+          title: "3D Spatial Design & DM Approval",
+          description: "Photorealistic 3D renders matched with 100% Dubai Municipality & Civil Defense compliance.",
+          meta: "Timeline: 5–7 Days",
           image: "/assets/hero-penthouse.png",
           link: "#"
         },
         {
           num: "02",
-          title: "Design Concept",
-          description: "Our award-winning design team creates mood boards, 3D renderings, and detailed spatial plans to bring your vision to life before construction begins.",
+          title: "15k sqft Factory Fabrication",
+          description: "Precision CNC cutting, European walnut joinery, and custom Italian curtain stitching in our Dubai facility.",
+          meta: "Timeline: 10–14 Days",
           image: "/assets/project-office.png",
           link: "#"
         },
         {
           num: "03",
-          title: "Execution & Build",
-          description: "Our dedicated project managers oversee the entire fit-out process, coordinating with trusted contractors and ensuring the highest quality standards are met.",
+          title: "On-Site Turnkey Installation",
+          description: "Clean installation by certified site engineers with daily photo feeds pushed to your customer portal.",
+          meta: "Timeline: 7–10 Days",
           image: "/assets/cabinet-joinery.jpeg",
           link: "#"
         },
         {
           num: "04",
-          title: "Handover & Support",
-          description: "Upon completion, we conduct a rigorous snagging process and hand over the keys. Our relationship continues with dedicated post-occupancy support.",
+          title: "Final Handover & Guarantee",
+          description: "Final walk-through, municipality completion certificate, and 5-year warranty package.",
+          meta: "Warranty: 5 Years Included",
           image: "/assets/dining-table.jpeg",
           link: "#"
         }
@@ -369,9 +375,11 @@ export const dictionaries = {
       title: "تحويل المساحات",
       viewAll: "عرض جميع المشاريع",
       items: [
-        { title: "المقر الرئيسي السري لهيئة حكومية", place: "دبي" },
-        { title: "مركز تجربة مساكن البحر الأحمر الدولية", place: "المملكة العربية السعودية" },
-        { title: "سايكيندو", place: "" }
+        { title: "فيلا فاخرة في دبي هيلز إستيت", place: "دبي هيلز إستيت", subtitle: "تسليم مفتاح كامل ونجارة أوروبية" },
+        { title: "بنتهاوس على الواجهة البحرية في نخلة جميرا", place: "نخلة جميرا", subtitle: "ستائر سومفي الآلية وألواح إيطالية" },
+        { title: "مقر شركة تقنية في وسط مدينة دبي", place: "وسط مدينة دبي", subtitle: "تجهيز تجاري وموافقة بلدية دبي" },
+        { title: "جناح فيلا صديقة للبيئة في البراري", place: "البراري", subtitle: "خزائن جوز مخصصة ومفروشات ناعمة" },
+        { title: "جناح قصر في تلال الإمارات", place: "تلال الإمارات", subtitle: "عمارة تسليم مفتاح كاملة ونجارة" }
       ]
     },
     capabilitiesSection: {
@@ -593,29 +601,33 @@ export const dictionaries = {
       steps: [
         {
           num: "01",
-          title: "الاكتشاف والتخطيط",
-          description: "نبدأ بفهم رؤيتك ومتطلباتك وميزانيتك. يقوم فريقنا بإجراء تحليل شامل للموقع ويضع خطة مشروع شاملة.",
+          title: "تصميم مكاني ثلاثي الأبعاد وموافقة بلدية دبي",
+          description: "تصاميم ثلاثية الأبعاد واقعية مطابقة بنسبة 100% لمتطلبات بلدية دبي والدفاع المدني.",
+          meta: "المدة الزمنية: 5–7 أيام",
           image: "/assets/hero-penthouse.png",
           link: "#"
         },
         {
           num: "02",
-          title: "مفهوم التصميم",
-          description: "يقوم فريق التصميم الحائز على جوائز لدينا بإنشاء لوحات مزاجية وتصاميم ثلاثية الأبعاد وخطط مكانية مفصلة لإحياء رؤيتك قبل بدء البناء.",
+          title: "تصنيع في مصنع بمساحة 15 ألف قدم مربع",
+          description: "قطع دقيق بتقنية CNC، ونجارة جوز أوروبي، وخياطة ستائر إيطالية مخصصة في منشأتنا بدبي.",
+          meta: "المدة الزمنية: 10–14 يوماً",
           image: "/assets/project-office.png",
           link: "#"
         },
         {
           num: "03",
-          title: "التنفيذ والبناء",
-          description: "يشرف مديرو المشاريع المخصصون لدينا على عملية التجهيز بأكملها، وينسقون مع المقاولين الموثوق بهم ويضمنون تلبية أعلى معايير الجودة.",
+          title: "تركيب تسليم مفتاح في الموقع",
+          description: "تركيب نظيف بواسطة مهندسي موقع معتمدين مع بث صور يومي إلى بوابة العميل الخاصة بك.",
+          meta: "المدة الزمنية: 7–10 أيام",
           image: "/assets/cabinet-joinery.jpeg",
           link: "#"
         },
         {
           num: "04",
-          title: "التسليم والدعم",
-          description: "عند الانتهاء، نجري عملية فحص صارمة ونسلم المفاتيح. تستمر علاقتنا بدعم مخصص بعد الإشغال.",
+          title: "التسليم النهائي والضمان",
+          description: "جولة تفقد نهائية، وشهادة إنجاز من البلدية، وحزمة ضمان لمدة 5 سنوات.",
+          meta: "الضمان: 5 سنوات شاملة",
           image: "/assets/dining-table.jpeg",
           link: "#"
         }

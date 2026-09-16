@@ -32,6 +32,13 @@ const CORE_LOCATIONS = new Set([
   "Umm Al Quwain",
 ]);
 
+// The sheet's own URL / Canonical / Hreflang Pair columns are written against
+// baitalebdaa.ae, but the real production domain is baitalebdaa.com — rewrite the
+// domain on every URL we take from the sheet rather than editing the sheet itself.
+const SHEET_DOMAIN = "baitalebdaa.ae";
+const PRODUCTION_DOMAIN = "baitalebdaa.com";
+const toProductionDomain = (url) => String(url || "").replace(SHEET_DOMAIN, PRODUCTION_DOMAIN);
+
 const URL_RE = /^https:\/\/baitalebdaa\.ae\/(en|ar)\/([^/]+)\/([^/]+)\/$/;
 
 const wb = XLSX.readFile(inputPath);
@@ -87,10 +94,11 @@ for (const row of rows) {
     metaDescription: row["Meta Description"],
     h1: row.H1,
     h2Themes: String(row["H2 Keyword Themes"] || "").split(";").map((s) => s.trim()).filter(Boolean),
-    canonical: row.Canonical,
-    hreflang: row["Hreflang Pair"],
+    canonical: toProductionDomain(row.Canonical),
+    hreflang: toProductionDomain(row["Hreflang Pair"]),
     intent: row.Intent,
-    approved: isCore,
+    // Client directive: index all 1,020 pages, not just the emirate-level tier.
+    approved: true,
   };
 }
 

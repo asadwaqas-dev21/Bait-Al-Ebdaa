@@ -2,7 +2,7 @@ import seoData from "../data/seo-pages.json";
 
 export const dynamic = "force-static";
 
-const BASE = "https://baitalebdaa.ae";
+const BASE = "https://baitalebdaa.com";
 
 const STATIC_PATHS = ["our-services", "our-projects", "our-projects/government-authority", "process", "media"];
 

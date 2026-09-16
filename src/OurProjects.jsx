@@ -14,15 +14,16 @@ export default function OurProjects() {
   const t = dict.ourProjectsPage;
   const projects = dict.projectsSection.items;
   const projectImages = [
+    "/assets/project-villa.png",
     "/assets/hero-penthouse.png",
     "/assets/project-office.png",
-    "/assets/project-villa.png",
-    "/assets/cad-render.png"
+    "/assets/dressing-unit-2.jpeg",
+    "/assets/cabinet-joinery.jpeg",
   ];
 
-  const filteredProjects = activeFilter === "all" 
-    ? projects.map((p, i) => ({ ...p, image: projectImages[i] }))
-    : projects.map((p, i) => ({ ...p, image: projectImages[i] })).filter(p => p.category === activeFilter);
+  const filteredProjects = activeFilter === "all"
+    ? projects.map((p, i) => ({ ...p, image: projectImages[i % projectImages.length] }))
+    : projects.map((p, i) => ({ ...p, image: projectImages[i % projectImages.length] })).filter(p => p.category === activeFilter);
 
   const filterOptions = [
     { id: "all", label: t.filters.all },
@@ -84,10 +85,12 @@ export default function OurProjects() {
                 <Reveal className="project-grid-card" key={i} delay={i * 100}>
                   <a href={`/${lang}/our-projects/${p.slug || 'government-authority'}`} className="project-card-link">
                     <div className="project-image-wrapper">
+                      {p.place && <span className="project-grid-badge">{p.place}</span>}
                       <Image src={p.image} alt={p.title} fill sizes="(max-width: 700px) 100vw, (max-width: 980px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
                     </div>
                     <div className="project-grid-meta">
-                      <h3>{p.title}, {p.place} <ArrowUpRight size={18} /></h3>
+                      <h3>{p.title} <ArrowUpRight size={18} /></h3>
+                      {p.subtitle && <p className="project-grid-subtitle">{p.subtitle}</p>}
                     </div>
                   </a>
                 </Reveal>
