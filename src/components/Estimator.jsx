@@ -19,7 +19,11 @@ export function Estimator({ compact = false, defaultLocationIndex = 0, ctaHref =
 
   const totalCost = size * BASE_RATE_BY_SCOPE[scope] * LOCATION_MULTIPLIER[location];
   const formattedCost = new Intl.NumberFormat('en-AE', { style: 'currency', currency: 'AED', maximumFractionDigits: 0 }).format(totalCost);
-  const sizePct = ((size - 500) / (15000 - 500)) * 100;
+  // Matches the native thumb's own position formula (thumbRadius + fraction * (trackWidth
+  // - thumbWidth)) so the fill edge lines up with the thumb center exactly, not just
+  // approximately — a plain percentage leaves a gap near the low/high ends.
+  const sizeFraction = (size - 500) / (15000 - 500);
+  const sizeFillPos = `calc(${sizeFraction} * (100% - 20px) + 10px)`;
 
   return (
     <section className={`section estimator-section${compact ? " estimator-section--compact" : ""}`}>
@@ -47,7 +51,7 @@ export function Estimator({ compact = false, defaultLocationIndex = 0, ctaHref =
                 value={size}
                 onChange={(e) => setSize(Number(e.target.value))}
                 className="estimator-slider"
-                style={{ background: `linear-gradient(to right, #000 ${sizePct}%, rgba(0,0,0,.12) ${sizePct}%)` }}
+                style={{ background: `linear-gradient(to right, #000 ${sizeFillPos}, rgba(0,0,0,.12) ${sizeFillPos})` }}
               />
               <div className="estimator-slider-ticks">
                 <span>500 sqft</span>

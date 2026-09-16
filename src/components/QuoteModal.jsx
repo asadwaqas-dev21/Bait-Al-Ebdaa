@@ -18,7 +18,8 @@ export function QuoteModal({ open, onClose }) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  const sizePct = ((size - 500) / (15000 - 500)) * 100;
+  const sizeFraction = (size - 500) / (15000 - 500);
+  const sizeFillPos = `calc(${sizeFraction} * (100% - 20px) + 10px)`;
 
   const submit = (event) => {
     event.preventDefault();
@@ -87,7 +88,7 @@ export function QuoteModal({ open, onClose }) {
               value={size}
               onChange={(e) => setSize(Number(e.target.value))}
               className="estimator-slider"
-              style={{ background: `linear-gradient(to right, #000 ${sizePct}%, rgba(0,0,0,.12) ${sizePct}%)` }}
+              style={{ background: `linear-gradient(to right, #000 ${sizeFillPos}, rgba(0,0,0,.12) ${sizeFillPos})` }}
             />
             <div className="estimator-slider-ticks">
               <span>500 sqft</span>

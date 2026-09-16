@@ -1072,7 +1072,7 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .estimator-label-row label {
@@ -1080,12 +1080,12 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
 }
 
 .estimator-value-badge {
-  background: rgba(0,0,0,0.05);
-  padding: 6px 12px;
-  border-radius: 8px;
+  background: #6bd989;
+  padding: 6px 16px;
+  border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 700;
+  color: #0b1f10;
 }
 
 .estimator-slider {
@@ -1096,7 +1096,7 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   height: 4px;
   border-radius: 2px;
   outline: none;
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 .estimator-slider::-webkit-slider-thumb {
@@ -1106,7 +1106,23 @@ h1,h2,h3,.menu-overlay__main>a,.studio__facts strong,.project-form legend,.foote
   height: 20px;
   border-radius: 50%;
   background: #000;
+  border: none;
   cursor: pointer;
+}
+
+.estimator-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.estimator-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
 }
 
 .estimator-slider-ticks {
